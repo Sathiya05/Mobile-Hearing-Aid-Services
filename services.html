@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | ClearSound Mobile Hearing Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="images/logo.jpeg">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: '#14b8a6',
+            softblue: '#3b82f6',
+            green: '#10b981',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap');
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .transition-theme { transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease; }
+    .bg-dot-pattern {
+      background-image: radial-gradient(rgba(59, 130, 246, 0.15) 1.5px, transparent 1.5px);
+      background-size: 32px 32px;
+    }
+    .dark .bg-dot-pattern {
+      background-image: radial-gradient(rgba(20, 184, 166, 0.15) 1.5px, transparent 1.5px);
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .accordion-content.open {
+      max-height: 600px;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans transition-theme overflow-x-hidden">
+  <div id="navbar"></div>
+
+  <!-- 1. HERO BANNER -->
+ <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300">
+  <!-- Minimalist Grid Background Decoration -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+  <div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[400px] w-[400px] rounded-full bg-teal/10 opacity-70 blur-[100px] pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8">
+    <!-- Main Content Wrapper: Explicitly centered on mobile/tablet, split on desktop -->
+    <div class="flex flex-col items-center text-center lg:flex-row lg:text-left lg:items-center gap-14 lg:gap-20">
+
+      <!-- Text Content -->
+      <div class="flex-1 flex flex-col items-center text-center lg:items-start lg:text-left w-full md:max-w-2xl lg:max-w-none mx-auto">
+        <!-- Sleek Pill Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 mb-8 shadow-sm backdrop-blur-sm">
+          <span class="flex h-2 w-2 rounded-full bg-teal shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+          <span class="text-xs font-bold uppercase tracking-widest text-slate-700 dark:text-slate-300">Full Spectrum Care</span>
+        </div>
+
+        <!-- High-Contrast Headline -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.05] mb-6">
+          Professional care,<br class="hidden md:block lg:hidden" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal to-cyan-600">right at home.</span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl leading-relaxed font-medium">
+          From comprehensive hearing tests and custom hearing aid fittings to safe ear wax removal — everything delivered to your doorstep by licensed audiologists.
+        </p>
+
+        <!-- Modern Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
+          <a href="book.html" class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 w-full sm:w-auto rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-base transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.12)] overflow-hidden">
+            <span class="relative z-10">Book Home Visit</span>
+            <i class="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <a href="tel:+1234567890" class="inline-flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto rounded-xl bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-bold text-base hover:border-teal hover:text-teal dark:hover:border-teal dark:hover:text-teal transition-all duration-300">
+            <i class="fa-solid fa-phone text-sm"></i>
+            (123) 456-7890
+          </a>
+        </div>
+      </div>
+
+      <!-- Image & Overlay Visuals -->
+      <div class="flex-1 w-full max-w-lg md:max-w-2xl lg:max-w-none mx-auto relative hidden md:block">
+        <div class="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-slate-900/5 dark:ring-white/10 group">
+          <img src="images\22.avif" alt="Mobile hearing care service" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          
+          <!-- Integrated Frosted Glass Overlay -->
+          <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border border-white/50 dark:border-slate-700/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <div class="flex -space-x-3">
+                <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 border-2 border-white dark:border-slate-800"></div>
+                <div class="w-10 h-10 rounded-full bg-slate-300 dark:bg-slate-600 border-2 border-white dark:border-slate-800"></div>
+                <div class="w-10 h-10 rounded-full bg-teal flex items-center justify-center border-2 border-white dark:border-slate-800 text-white text-xs font-bold">+500</div>
+              </div>
+              <div class="text-left">
+                <p class="text-sm font-bold text-slate-900 dark:text-white">Top Rated Service</p>
+                <p class="text-xs font-medium text-slate-600 dark:text-slate-400">By Local Patients</p>
+              </div>
+            </div>
+            <div class="text-amber-400 flex gap-1 text-sm bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full shadow-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- 2. TRUSTED PARTNERS -->
+  <section class="py-10 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 transition-theme overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center gap-8 justify-between">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-500 whitespace-nowrap">Trusted Brands & Partners</p>
+      <div class="flex flex-wrap justify-center md:justify-end gap-8 md:gap-12 opacity-50 grayscale dark:opacity-40 text-xl font-bold font-heading">
+        <span>Phonak</span>
+        <span>Oticon</span>
+        <span>ReSound</span>
+        <span>Signia</span>
+        <span>Widex</span>
+        <span>Medicare</span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 4. MOBILE HEARING TEST - DETAILED -->
+  <section id="hearing-test" class="py-24 bg-white dark:bg-slate-950 transition-theme border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative w-full h-[350px] lg:h-[450px]">
+          <div class="absolute inset-0 rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
+            <img src="images/10.avif" alt="Audiologist performing hearing test" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div>
+          <span class="text-softblue font-bold uppercase tracking-widest text-xs mb-4 block">Service 01</span>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white leading-tight mb-6">Comprehensive Mobile Hearing Test</h2>
+          <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-6">Our complete in-home audiology assessment uses calibrated portable equipment to evaluate every aspect of your hearing function, providing results that meet or exceed clinical standards.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Pure-tone audiometry — air and bone conduction testing</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Speech recognition and word recognition scores</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Tympanometry and acoustic reflex testing</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Detailed report sent to your primary care physician</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Results and recommendations explained on the spot</span>
+            </li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="book.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-softblue text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-lg shadow-softblue/20">Book a Hearing Test <i class="fa-solid fa-arrow-right"></i></a>
+            <span class="inline-flex items-center gap-2 text-sm font-bold text-slate-500"><i class="fa-solid fa-clock"></i> Takes 45-60 minutes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. HEARING AID FITTING - DETAILED -->
+  <section id="hearing-aid" class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Service 02</span>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white leading-tight mb-6">Professional Hearing Aid Fitting</h2>
+          <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-6">We partner with the world's leading manufacturers to bring you the most advanced hearing devices. Each aid is programmed specifically for your prescription, ear anatomy, and daily listening environments.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Free consultation with demonstration of latest devices</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Real-ear measurement for precise, personalized programming</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Bluetooth streaming to smartphone, TV, and accessories</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Rechargeable battery options — no more fumbling with batteries</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Complimentary follow-up home visits for fine-tuning included</span>
+            </li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="book.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-teal text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-lg shadow-teal/20">Schedule a Fitting <i class="fa-solid fa-arrow-right"></i></a>
+            <span class="inline-flex items-center gap-2 text-sm font-bold text-slate-500"><i class="fa-solid fa-clock"></i> Takes 60-90 minutes</span>
+          </div>
+        </div>
+        <div class="relative w-full h-[350px] lg:h-[450px] order-1 lg:order-2">
+          <div class="absolute inset-0 rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
+            <img src="images/11.webp" alt="Happy patient with hearing aids" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. EAR WAX REMOVAL - DETAILED -->
+  <section id="wax-removal" class="py-24 bg-white dark:bg-slate-950 transition-theme border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative w-full h-[350px] lg:h-[450px]">
+          <div class="absolute inset-0 rounded-[2rem] overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
+            <img src="images/12.avif" alt="Ear wax removal procedure" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div>
+          <span class="text-green font-bold uppercase tracking-widest text-xs mb-4 block">Service 03</span>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white leading-tight mb-6">Safe Ear Wax Removal</h2>
+          <p class="text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-6">Blocked ears can cause discomfort, muffled hearing, and even dizziness. Our clinical microsuction and irrigation techniques are gentle, effective, and provide instant relief in most cases.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Microsuction — the most comfortable and effective method</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Warm water irrigation when clinically appropriate</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Visual inspection via otoscope before and after</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Immediate hearing improvement in most cases</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-400">
+              <i class="fa-solid fa-check-circle text-green mt-0.5"></i>
+              <span>Safe for perforated eardrums and existing ear tubes</span>
+            </li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="book.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-green text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-lg shadow-green/20">Book Wax Removal <i class="fa-solid fa-arrow-right"></i></a>
+            <span class="inline-flex items-center gap-2 text-sm font-bold text-slate-500"><i class="fa-solid fa-clock"></i> Takes 15-30 minutes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PRICING -->
+  <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Pricing</span>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">Transparent pricing, no surprises</h2>
+        <p class="text-slate-600 dark:text-slate-400 font-medium">We accept most major insurances and offer competitive self-pay rates. What you see is what you pay.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:-translate-y-2 transition-all duration-300 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-softblue/10 text-softblue flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-wave-square"></i>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Hearing Test</h4>
+          <p class="text-xs text-slate-500 mb-4">Comprehensive in-home assessment</p>
+          <div class="text-4xl font-heading font-black text-softblue mb-6">$99<span class="text-lg font-bold text-slate-400">/visit</span></div>
+          <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400 mb-8">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Pure-tone audiometry</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Speech testing</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Tympanometry</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Detailed report</li>
+          </ul>
+          <a href="book.html" class="block w-full py-3.5 text-center rounded-xl bg-softblue text-white font-bold text-sm hover:scale-105 transition-transform duration-300">Book Now</a>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border-2 border-teal dark:border-teal hover:-translate-y-2 transition-all duration-300 shadow-lg relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-teal text-white text-xs font-bold uppercase tracking-wider">Most Popular</div>
+          <div class="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-ear-deaf"></i>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Hearing Aid Fitting</h4>
+          <p class="text-xs text-slate-500 mb-4">Consultation, fitting, and follow-up</p>
+          <div class="text-4xl font-heading font-black text-teal mb-6">$199<span class="text-lg font-bold text-slate-400">/visit</span></div>
+          <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400 mb-8">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Device demonstration</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Real-ear measurement</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Custom programming</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> 30-day fine-tuning</li>
+          </ul>
+          <a href="book.html" class="block w-full py-3.5 text-center rounded-xl bg-teal text-white font-bold text-sm hover:scale-105 transition-transform duration-300">Book Now</a>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:-translate-y-2 transition-all duration-300 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-green/10 text-green flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Wax Removal</h4>
+          <p class="text-xs text-slate-500 mb-4">Microsuction or irrigation</p>
+          <div class="text-4xl font-heading font-black text-green mb-6">$79<span class="text-lg font-bold text-slate-400">/visit</span></div>
+          <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400 mb-8">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Otoscope inspection</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Microsuction</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Aftercare advice</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-green text-xs"></i> Follow-up if needed</li>
+          </ul>
+          <a href="book.html" class="block w-full py-3.5 text-center rounded-xl bg-green text-white font-bold text-sm hover:scale-105 transition-transform duration-300">Book Now</a>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-500 mt-8">* Prices are self-pay estimates. Insurance co-pays may vary. We accept Medicare, BlueCross, UnitedHealthcare, Cigna, and Aetna.</p>
+    </div>
+  </section>
+
+  <!-- 8. PATIENT TESTIMONIALS -->
+  <section class="py-24 bg-white dark:bg-slate-950 transition-theme border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="max-w-2xl">
+          <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Testimonials</span>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white leading-tight">What our patients say</h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:-translate-y-1 transition-transform">
+          <div>
+            <div class="text-softblue text-3xl mb-6 opacity-50"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="font-medium text-slate-600 dark:text-slate-300 leading-relaxed mb-8">"My father is in a wheelchair and getting to a clinic was a nightmare. ClearSound came to his assisted living facility, tested his hearing, and fitted him for aids. It completely changed his quality of life."</p>
+          </div>
+          <div>
+            <div class="font-bold text-lg text-slate-900 dark:text-white">Margaret T.</div>
+            <div class="text-xs text-softblue font-bold tracking-wider uppercase mt-1">Daughter of Patient</div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:-translate-y-1 transition-transform">
+          <div>
+            <div class="text-teal text-3xl mb-6 opacity-50"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="font-medium text-slate-600 dark:text-slate-300 leading-relaxed mb-8">"I work from home and had a blocked ear. They came during my lunch break, cleared the wax in 15 minutes, and my hearing was perfect again. Incredibly professional and convenient."</p>
+          </div>
+          <div>
+            <div class="font-bold text-lg text-slate-900 dark:text-white">James R.</div>
+            <div class="text-xs text-teal font-bold tracking-wider uppercase mt-1">Remote Worker</div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex-col justify-between shadow-sm hover:-translate-y-1 transition-transform hidden lg:flex">
+          <div>
+            <div class="text-green text-3xl mb-6 opacity-50"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="font-medium text-slate-600 dark:text-slate-300 leading-relaxed mb-8">"I bought my first hearing aids through them. Being able to test them while sitting in my own living room watching my own TV ensured they were programmed perfectly for my real life."</p>
+          </div>
+          <div>
+            <div class="font-bold text-lg text-slate-900 dark:text-white">William S.</div>
+            <div class="text-xs text-green font-bold tracking-wider uppercase mt-1">Retiree</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme">
+    <div class="max-w-[800px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">FAQ</span>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">Frequently asked questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 overflow-hidden">
+          <button class="accordion-trigger flex items-center justify-between w-full p-6 text-left font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+            <span>Do I need a referral from my doctor?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6">
+            <p class="pb-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">No referral is needed. You can book an appointment directly with us. However, if you plan to use insurance, some plans may require a referral — we will help you verify your coverage before your visit.</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 overflow-hidden">
+          <button class="accordion-trigger flex items-center justify-between w-full p-6 text-left font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+            <span>How long does a hearing test take?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6">
+            <p class="pb-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">A comprehensive hearing assessment typically takes 45 to 60 minutes. This includes a visual ear inspection, pure-tone testing, speech testing, and a thorough discussion of your results and recommendations.</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 overflow-hidden">
+          <button class="accordion-trigger flex items-center justify-between w-full p-6 text-left font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+            <span>What areas do you cover?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6">
+            <p class="pb-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">We currently cover all major metropolitan areas within a 50-mile radius. This includes surrounding suburbs and many rural communities. Contact us to check if we service your specific location.</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 overflow-hidden">
+          <button class="accordion-trigger flex items-center justify-between w-full p-6 text-left font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+            <span>Do you accept insurance?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6">
+            <p class="pb-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Yes, we accept Medicare, BlueCross, UnitedHealthcare, Cigna, and Aetna. We also offer competitive self-pay rates. Our team will verify your benefits before your appointment so there are no surprises.</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 overflow-hidden">
+          <button class="accordion-trigger flex items-center justify-between w-full p-6 text-left font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+            <span>Is ear wax removal painful?</span>
+            <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content px-6">
+            <p class="pb-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Not at all. Microsuction is pain-free and most patients find it very comfortable. You may feel a slight sensation of pressure, but there is no pain. Many patients report immediate relief and clearer hearing after the procedure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CTA -->
+  <section class="py-24 bg-white dark:bg-slate-950 transition-theme">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
+      <div class="relative rounded-3xl overflow-hidden bg-teal p-10 md:p-16 text-center shadow-2xl">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl mix-blend-overlay pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl mix-blend-overlay pointer-events-none"></div>
+        <div class="relative z-10 max-w-2xl mx-auto text-white">
+          <h2 class="text-4xl md:text-5xl font-heading font-black mb-6">Ready to hear better?</h2>
+          <p class="text-lg font-medium mb-10 text-teal-50">Skip the waiting room. Schedule a home visit today and discover how convenient professional hearing care can be.</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="book.html" class="px-8 py-4 rounded-xl bg-slate-900 text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-xl">Book Home Appointment</a>
+            <a href="tel:+1234567890" class="px-8 py-4 rounded-xl border-2 border-white text-white font-bold text-sm hover:bg-white hover:text-teal transition-colors duration-300">Call (123) 456-7890</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+
+  <script>
+    document.querySelectorAll('.accordion-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.fa-chevron-down');
+        const isOpen = content.classList.contains('open');
+
+        document.querySelectorAll('.accordion-content.open').forEach(c => {
+          c.classList.remove('open');
+          c.previousElementSibling.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+        });
+
+        if (!isOpen) {
+          content.classList.add('open');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

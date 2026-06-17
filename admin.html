@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ClearSound</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="icon" href="images/logo.jpeg">
+
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        teal: '#14b8a6',
+                        softblue: '#3b82f6',
+                        green: '#10b981',
+                        darkteal: '#0d9488',
+                        slateblue: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { -webkit-font-smoothing: antialiased; }
+        
+        * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+
+        /* RTL support */
+        html[dir="rtl"] .ml-auto { margin-left: 0 !important; margin-right: auto !important; }
+        html[dir="rtl"] .ml-3 { margin-left: 0 !important; margin-right: 0.75rem !important; }
+        html[dir="rtl"] .mr-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+        html[dir="rtl"] .pl-4 { padding-left: 0 !important; padding-right: 1rem !important; }
+        html[dir="rtl"] .pr-2 { padding-right: 0 !important; padding-left: 0.5rem !important; }
+        html[dir="rtl"] .border-r { border-right: none !important; border-left: 1px solid rgba(148, 163, 184, 0.1) !important; }
+        html[dir="rtl"] .border-l { border-left: none !important; border-right: 1px solid rgba(148, 163, 184, 0.1) !important; }
+
+        #sidebar { transition: transform 0.3s ease-in-out; }
+
+        .page-content { display: none; }
+        .page-content.active { display: block; animation: fadeIn 0.4s ease-out forwards; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Dispatch Pulsing Dot */
+        .pulse-dot {
+            box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.7);
+            animation: pulse-teal 2s infinite;
+        }
+        @keyframes pulse-teal {
+            0% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(20, 184, 166, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0); }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans overflow-x-hidden">
+
+    <div id="overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity duration-300"></div>
+
+    <div class="flex h-screen overflow-hidden relative">
+
+        <aside id="sidebar" class="fixed lg:static inset-y-0 left-0 w-72 flex-shrink-0 bg-white dark:bg-slate-900 shadow-2xl lg:shadow-none flex flex-col h-full border-r border-slate-200 dark:border-slate-800 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
+
+            <div class="px-6 pt-8 pb-6 flex items-center justify-between border-b border-slate-100 dark:border-slate-800">
+                 <a href="index.html" class="relative z-[60] flex items-center gap-3 group shrink-0">
+            <div class="w-11 h-11 rounded-xl bg-[#14b8a6] flex items-center justify-center shadow-lg shadow-[#14b8a6]/20">
+                <i class="fa-solid fa-ear-listen text-white text-lg"></i>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-xl font-black tracking-tight text-slate-800 dark:text-white transition-colors">
+                    Clear<span class="text-[#14b8a6]">Sound</span>
+                </span>
+                <span class="text-[9px] tracking-[0.15em] uppercase text-slate-500 dark:text-slate-400 font-bold leading-none mt-1">
+                     Hearing Services
+                </span>
+            </div>
+        </a>
+                <button id="closeSidebarBtn" class="lg:hidden w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-teal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="lg:hidden px-6 py-4 flex items-center gap-3 border-b border-slate-100 dark:border-slate-800">
+                <button id="mobileRtlToggle" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-teal transition-all">
+            <i class="fas fa-arrow-right-arrow-left"></i>
+                </button>
+                <button id="mobileDarkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-teal transition-all">
+                    <i id="mobileThemeIcon" class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <nav id="sidebar-nav" class="mt-6 flex-1 px-4 space-y-2 overflow-y-auto no-scrollbar">
+                
+                <a href="javascript:void(0)" onclick="showPage('overview', this)" class="nav-link flex items-center px-4 py-3.5 text-sm font-bold rounded-xl bg-teal text-white shadow-lg shadow-teal/20 transition-all">
+                    <i class="fas fa-chart-pie w-6 text-lg"></i>
+                    <span class="ml-3">Overview</span>
+                </a>
+                
+                <a href="javascript:void(0)" onclick="showPage('dispatch', this)" class="nav-link flex items-center px-4 py-3.5 text-sm font-medium text-slate-600 dark:text-slate-400 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-teal transition-all">
+                    <i class="fas fa-map-location-dot w-6 text-lg"></i>
+                    <span class="ml-3">Route Dispatch</span>
+                    <span class="ml-auto w-2 h-2 rounded-full bg-teal animate-pulse"></span>
+                </a>
+                
+                <a href="javascript:void(0)" onclick="showPage('patients', this)" class="nav-link flex items-center px-4 py-3.5 text-sm font-medium text-slate-600 dark:text-slate-400 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-teal transition-all">
+                    <i class="fas fa-users w-6 text-lg"></i>
+                    <span class="ml-3">Patient Roster</span>
+                </a>
+
+                <a href="javascript:void(0)" onclick="showPage('inventory', this)" class="nav-link flex items-center px-4 py-3.5 text-sm font-medium text-slate-600 dark:text-slate-400 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-teal transition-all">
+                    <i class="fas fa-boxes-stacked w-6 text-lg"></i>
+                    <span class="ml-3">Inventory</span>
+                </a>
+
+                <div class="border-t border-slate-200 dark:border-slate-800 my-6"></div>
+
+                
+                <a href="login.html" class="flex items-center px-4 py-3.5 text-sm font-medium text-red-500 rounded-xl hover:bg-red-50 dark:hover:bg-red-500/10 transition-colors mt-2">
+                    <i class="fas fa-sign-out-alt w-6"></i>
+                    <span class="ml-3">Log Out</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 flex flex-col overflow-y-auto w-full relative">
+
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-teal/5 rounded-full blur-[150px] pointer-events-none z-0 hidden lg:block"></div>
+
+            <header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 px-6 py-4 sticky top-0 z-30 flex items-center justify-between">
+                <div>
+                    <h1 id="mainTitle" class="text-xl md:text-2xl font-heading font-black text-slate-900 dark:text-white">Clinic Overview</h1>
+                </div>
+
+                <div class="flex items-center gap-3 md:gap-5">
+                     <div class="flex items-center gap-3 px-2 py-1.5 md:px-3 bg-slate-100 dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 cursor-pointer">
+                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt="Admin Avatar" class="w-8 h-8 rounded-full object-cover border border-slate-300 dark:border-slate-600">
+                         <div class="hidden sm:block text-left pr-2">
+                             <p class="text-xs font-bold text-slate-900 dark:text-white leading-tight">Marcus Vance</p>
+                             <p class="text-[9px] text-slate-500 font-bold uppercase tracking-widest leading-tight">Clinic Director</p>
+                         </div>
+                     </div>
+ 
+                     <div class="hidden lg:flex items-center gap-2 border-l border-slate-200 dark:border-slate-800 pl-3 md:pl-5">
+                         <button id="desktopRtlToggle" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-teal hover:bg-slate-200 dark:hover:bg-slate-800 transition-all shadow-sm">
+                             <span class="text-[10px] font-black uppercase">RTL</span>
+                         </button>
+                         <button id="desktopDarkToggle" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-teal hover:bg-slate-200 dark:hover:bg-slate-800 transition-all shadow-sm">
+                             <i id="desktopThemeIcon" class="fas fa-moon text-sm"></i>
+                         </button>
+                     </div>
+
+                     <button id="hamburgerBtn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-slate-900 dark:bg-white text-white dark:text-black shadow-md">
+                         <i class="fas fa-bars text-lg"></i>
+                     </button>
+                 </div>
+            </header>
+
+            <div class="p-6 lg:p-10 space-y-8 max-w-[1600px] mx-auto w-full relative z-10">
+
+                <div id="page-overview" class="page-content active space-y-8">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+                            <div class="absolute -right-4 -top-4 w-24 h-24 bg-teal/10 rounded-full blur-xl pointer-events-none"></div>
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-teal"><i class="fas fa-van-shuttle text-xl"></i></div>
+                                <span class="text-xs font-bold text-teal bg-teal/10 px-2 py-1 rounded-md">Today</span>
+                            </div>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Mobile Visits</p>
+                            <p class="text-4xl font-heading font-black text-slate-900 dark:text-white">12</p>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+                            <div class="absolute -right-4 -top-4 w-24 h-24 bg-softblue/10 rounded-full blur-xl pointer-events-none"></div>
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-softblue"><i class="fas fa-file-waveform text-xl"></i></div>
+                                <span class="text-xs font-bold text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md">Pending</span>
+                            </div>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Audiograms to Review</p>
+                            <p class="text-4xl font-heading font-black text-slate-900 dark:text-white">4</p>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"><i class="fas fa-users text-xl"></i></div>
+                            </div>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Active Patients</p>
+                            <p class="text-4xl font-heading font-black text-slate-900 dark:text-white">1,284</p>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"><i class="fas fa-box-open text-xl"></i></div>
+                                <span class="text-xs font-bold text-red-500"><i class="fas fa-triangle-exclamation mr-1"></i> Low Stock</span>
+                            </div>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Inventory Alerts</p>
+                            <p class="text-4xl font-heading font-black text-slate-900 dark:text-white">3</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+                        
+                        <div class="xl:col-span-2 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 p-6 flex flex-col shadow-sm">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white">Live Fleet Status</h3>
+                                <button onclick="showPage('dispatch', document.querySelectorAll('.nav-link')[1])" class="text-xs font-bold text-teal hover:underline">View Full Route</button>
+                            </div>
+                            <div class="relative w-full h-[350px] rounded-2xl overflow-hidden group">
+                                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80" alt="Map View" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700">
+                                <div class="absolute inset-0 bg-teal/10 mix-blend-multiply"></div>
+                                
+                                <div class="absolute top-[40%] left-[30%] flex flex-col items-center">
+                                    <div class="w-4 h-4 bg-teal rounded-full pulse-dot border-2 border-white"></div>
+                                    <span class="mt-2 px-2 py-1 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-[10px] font-bold rounded shadow-md">Van 1 (En Route)</span>
+                                </div>
+                                <div class="absolute top-[60%] right-[25%] flex flex-col items-center">
+                                    <div class="w-4 h-4 bg-softblue rounded-full border-2 border-white shadow-md"></div>
+                                    <span class="mt-2 px-2 py-1 bg-white dark:bg-slate-900 text-slate-900 dark:text-white text-[10px] font-bold rounded shadow-md">Van 2 (At Patient)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 dark:bg-black rounded-[2rem] border border-slate-800 p-8 shadow-xl text-white flex flex-col relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-teal/20 blur-3xl rounded-full"></div>
+                            <h3 class="text-xl font-heading font-bold mb-6 relative z-10">Action Center</h3>
+                            
+                            <div class="space-y-4 relative z-10 flex-1">
+                                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors cursor-pointer">
+                                    <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mb-1">New Appointment</p>
+                                    <p class="text-sm font-medium">Maria Garcia requested a fitting tweak on Thursday.</p>
+                                </div>
+                                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors cursor-pointer">
+                                    <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mb-1">Stock Alert</p>
+                                    <p class="text-sm font-medium">Size 8 Open Domes are below minimum threshold.</p>
+                                </div>
+                                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors cursor-pointer">
+                                    <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mb-1">Audiogram Review</p>
+                                    <p class="text-sm font-medium">Dr. Chen submitted 2 reports requiring your sign-off.</p>
+                                </div>
+                            </div>
+                            <button class="w-full mt-6 py-3.5 bg-teal text-white rounded-xl text-sm font-bold shadow-lg shadow-teal/20 hover:bg-darkteal transition-all">
+                                Review All Actions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-dispatch" class="page-content space-y-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">Route Dispatch</h2>
+                        <div class="flex gap-2">
+                            <button class="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-bold rounded-xl border border-slate-200 dark:border-slate-700">Van 1</button>
+                            <button class="px-4 py-2 bg-white dark:bg-slate-900 text-slate-500 text-xs font-bold rounded-xl border border-slate-200 dark:border-slate-700">Van 2</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 p-8 shadow-sm">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-8 border-b border-slate-100 dark:border-slate-800 pb-4">Today's Schedule: Van 1</h3>
+                            
+                            <div class="relative border-l-2 border-slate-100 dark:border-slate-800 ml-4 space-y-8 pl-8">
+                                
+                                <div class="relative">
+                                    <div class="absolute -left-[41px] top-1 w-5 h-5 bg-teal rounded-full border-4 border-white dark:border-slate-900 shadow-sm"></div>
+                                    <p class="text-[10px] text-teal font-bold uppercase tracking-widest mb-1">09:00 AM - Complete</p>
+                                    <h4 class="text-base font-bold text-slate-900 dark:text-white">John Doe</h4>
+                                    <p class="text-sm text-slate-500 font-medium mt-1">Annual Hearing Test • 124 Oak Street</p>
+                                </div>
+
+                                <div class="relative">
+                                    <div class="absolute -left-[41px] top-1 w-5 h-5 bg-white dark:bg-slate-800 rounded-full border-4 border-teal shadow-sm pulse-dot"></div>
+                                    <p class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest mb-1">11:30 AM - In Progress</p>
+                                    <h4 class="text-base font-bold text-slate-900 dark:text-white">Maria Garcia</h4>
+                                    <p class="text-sm text-slate-500 font-medium mt-1">Initial Fitting (Phonak L90) • 1245 Birchwood Ln</p>
+                                </div>
+
+                                <div class="relative">
+                                    <div class="absolute -left-[41px] top-1 w-5 h-5 bg-slate-200 dark:bg-slate-700 rounded-full border-4 border-white dark:border-slate-900 shadow-sm"></div>
+                                    <p class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest mb-1">02:00 PM - Upcoming</p>
+                                    <h4 class="text-base font-bold text-slate-900 dark:text-white">Robert Smith</h4>
+                                    <p class="text-sm text-slate-500 font-medium mt-1">Device Recalibration • 88 Pine Road</p>
+                                </div>
+
+                                <div class="relative">
+                                    <div class="absolute -left-[41px] top-1 w-5 h-5 bg-slate-200 dark:bg-slate-700 rounded-full border-4 border-white dark:border-slate-900 shadow-sm"></div>
+                                    <p class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest mb-1">04:15 PM - Upcoming</p>
+                                    <h4 class="text-base font-bold text-slate-900 dark:text-white">Evelyn Clark</h4>
+                                    <p class="text-sm text-slate-500 font-medium mt-1">Hearing Test & Consultation • 550 West Ave</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-100 dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 overflow-hidden relative shadow-sm min-h-[400px]">
+                            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80" alt="Detailed Route" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute top-4 left-4 right-4 flex justify-between">
+                                <div class="bg-white/90 dark:bg-slate-900/90 backdrop-blur px-4 py-2 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
+                                    <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Current Location</p>
+                                    <p class="text-sm font-bold text-slate-900 dark:text-white">1245 Birchwood Ln</p>
+                                </div>
+                                <div class="bg-teal text-white px-4 py-2 rounded-xl shadow-lg flex items-center gap-2">
+                                    <i class="fas fa-location-arrow"></i>
+                                    <span class="text-sm font-bold">Navigate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-patients" class="page-content space-y-6">
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6">
+                        <h2 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">Patient Roster</h2>
+                        <div class="flex gap-3 w-full sm:w-auto">
+                            <div class="relative flex-1 sm:w-64">
+                                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                                <input type="text" placeholder="Search patients..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm focus:outline-none focus:border-teal">
+                            </div>
+                            <button class="px-5 py-2.5 bg-teal text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md hover:bg-darkteal transition-colors shrink-0">
+                                <i class="fas fa-plus mr-1"></i> New Patient
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+                        <div class="overflow-x-auto w-full">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-50 dark:bg-slate-950/50 border-b border-slate-200 dark:border-slate-800">
+                                        <th class="p-5 text-xs font-bold uppercase tracking-widest text-slate-500">Patient Details</th>
+                                        <th class="p-5 text-xs font-bold uppercase tracking-widest text-slate-500">Last Visit</th>
+                                        <th class="p-5 text-xs font-bold uppercase tracking-widest text-slate-500">Status</th>
+                                        <th class="p-5 text-xs font-bold uppercase tracking-widest text-slate-500">Current Device</th>
+                                        <th class="p-5 text-xs font-bold uppercase tracking-widest text-slate-500 text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-sm text-slate-700 dark:text-slate-300">
+                                    <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                        <td class="p-5 flex items-center gap-4">
+                                            <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
+                                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Avatar" class="w-full h-full object-cover">
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-slate-900 dark:text-white">Maria Garcia</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">ID: #48829</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-5 font-medium">Oct 24, 2024</td>
+                                        <td class="p-5 font-bold">Fitted</td>
+                                        <td class="p-5 font-medium">Phonak Audéo L90</td>
+                                        <td class="p-5 text-right">
+                                            <button class="p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"><i class="fas fa-chevron-right"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                        <td class="p-5 flex items-center gap-4">
+                                            <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
+                                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="Avatar" class="w-full h-full object-cover">
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-slate-900 dark:text-white">John Doe</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">ID: #48830</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-5 font-medium">Today</td>
+                                        <td class="p-5 font-bold">Needs Device</td>
+                                        <td class="p-5 font-medium">Pending Order</td>
+                                        <td class="p-5 text-right">
+                                            <button class="p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"><i class="fas fa-chevron-right"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                        <td class="p-5 flex items-center gap-4">
+                                            <div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
+                                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Avatar" class="w-full h-full object-cover">
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-slate-900 dark:text-white">Evelyn Clark</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">ID: #48815</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-5 font-medium">Sep 15, 2024</td>
+                                        <td class="p-5 font-bold">Follow-up</td>
+                                        <td class="p-5 font-medium">Oticon Real 1</td>
+                                        <td class="p-5 text-right">
+                                            <button class="p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"><i class="fas fa-chevron-right"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page-inventory" class="page-content space-y-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">Inventory Management</h2>
+                        <button class="px-5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white rounded-xl text-xs font-bold shadow-sm hover:border-teal transition-colors">
+                            Order Supplies
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center text-center group hover:border-teal transition-colors">
+                            <div class="w-24 h-24 mb-4 rounded-2xl bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1594434533760-02e0f3faaa68?auto=format&fit=crop&w=300&q=80" alt="Hearing Aid" class="w-full h-full object-cover mix-blend-multiply dark:mix-blend-lighten opacity-80">
+                            </div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Phonak Audéo L90</h3>
+                            <p class="text-xs text-slate-500 mb-4 font-medium">Premium RIC Device</p>
+                            <div class="w-full bg-slate-50 dark:bg-slate-800/50 rounded-xl p-3 flex justify-between items-center mb-4 border border-slate-100 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-600 dark:text-slate-400">In Stock</span>
+                                <span class="text-lg font-black text-slate-900 dark:text-white">12 Units</span>
+                            </div>
+                            <button class="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white rounded-lg text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Manage Stock</button>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center text-center group hover:border-teal transition-colors">
+                            <div class="w-24 h-24 mb-4 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-3xl text-slate-400">
+                                <i class="fas fa-battery-full"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Size 312 Batteries</h3>
+                            <p class="text-xs text-slate-500 mb-4 font-medium">Pack of 60</p>
+                            <div class="w-full bg-slate-50 dark:bg-slate-800/50 rounded-xl p-3 flex justify-between items-center mb-4 border border-slate-100 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-600 dark:text-slate-400">In Stock</span>
+                                <span class="text-lg font-black text-slate-900 dark:text-white">45 Packs</span>
+                            </div>
+                            <button class="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white rounded-lg text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Manage Stock</button>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
+                            <div class="w-24 h-24 mb-4 rounded-2xl bg-red-50 dark:bg-red-900/20 flex items-center justify-center text-3xl text-red-400">
+                                <i class="fas fa-circle-notch"></i>
+                            </div>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Open Domes (Size 8)</h3>
+                            <p class="text-xs text-slate-500 mb-4 font-medium">Silicone Earpieces</p>
+                            <div class="w-full bg-red-50 dark:bg-red-900/10 rounded-xl p-3 flex justify-between items-center mb-4 border border-red-100 dark:border-red-900/30">
+                                <span class="text-xs font-bold text-red-600 dark:text-red-400">In Stock</span>
+                                <span class="text-lg font-black text-red-600 dark:text-red-400">3 Packs</span>
+                            </div>
+                            <button class="w-full py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white rounded-lg text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Reorder Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        /* ===============================
+           TAB SWITCHING LOGIC
+        ================================ */
+        function showPage(pageId, element) {
+            // Hide all pages
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show target page
+            document.getElementById('page-' + pageId).classList.add('active');
+
+            // Update Header Title
+            const titles = {
+                'overview': 'Clinic Overview',
+                'dispatch': 'Route Dispatch',
+                'patients': 'Patient Roster',
+                'inventory': 'Inventory Management'
+            };
+            document.getElementById('mainTitle').innerText = titles[pageId];
+
+            // Reset Nav Styling with light-theme classes
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('bg-teal', 'text-white', 'shadow-lg', 'shadow-teal/20');
+                link.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-slate-800', 'hover:text-teal');
+                link.querySelector('span:first-of-type').classList.remove('font-bold');
+                link.querySelector('span:first-of-type').classList.add('font-medium');
+            });
+
+            // Set Active Nav Styling
+            if(element) {
+                element.classList.remove('text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-slate-800', 'hover:text-teal');
+                element.classList.add('bg-teal', 'text-white', 'shadow-lg', 'shadow-teal/20');
+                element.querySelector('span:first-of-type').classList.remove('font-medium');
+                element.querySelector('span:first-of-type').classList.add('font-bold');
+            }
+
+            // Close sidebar on mobile after clicking
+            if (window.innerWidth < 1024) closeSidebar();
+        }
+
+        /* ===============================
+           SIDEBAR, THEME & RTL LOGIC
+        ================================ */
+        const htmlElement = document.documentElement;
+        const desktopThemeBtn = document.getElementById("desktopDarkToggle");
+        const desktopThemeIcon = document.getElementById("desktopThemeIcon");
+        const desktopRtlBtn = document.getElementById("desktopRtlToggle");
+        
+        // Mobile Toggle Buttons
+        const mobileThemeBtn = document.getElementById("mobileDarkToggle");
+        const mobileThemeIcon = document.getElementById("mobileThemeIcon");
+        const mobileRtlBtn = document.getElementById("mobileRtlToggle");
+        
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+
+        // Theme initialization
+        function applyTheme() {
+            let theme = localStorage.getItem('clearsound-dark') === 'true';
+            if (theme) {
+                htmlElement.classList.add('dark');
+                if (desktopThemeIcon) desktopThemeIcon.className = 'fas fa-sun text-teal';
+                if (mobileThemeIcon) mobileThemeIcon.className = 'fas fa-sun text-teal';
+            } else {
+                htmlElement.classList.remove('dark');
+                if (desktopThemeIcon) desktopThemeIcon.className = 'fas fa-moon';
+                if (mobileThemeIcon) mobileThemeIcon.className = 'fas fa-moon';
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = htmlElement.classList.toggle('dark');
+            localStorage.setItem('clearsound-dark', isDark);
+            applyTheme();
+        }
+
+        if (desktopThemeBtn) desktopThemeBtn.addEventListener('click', toggleTheme);
+        if (mobileThemeBtn) mobileThemeBtn.addEventListener('click', toggleTheme);
+
+        // RTL Logic
+        function toggleRTL() {
+            const currentDir = htmlElement.getAttribute("dir");
+            const newDir = currentDir === "rtl" ? "ltr" : "rtl";
+            htmlElement.setAttribute("dir", newDir);
+            localStorage.setItem("clearsound-rtl", newDir);
+        }
+
+        if (desktopRtlBtn) desktopRtlBtn.addEventListener('click', toggleRTL);
+        if (mobileRtlBtn) mobileRtlBtn.addEventListener('click', toggleRTL);
+
+        // Sidebar Logic for Mobile
+        function openSidebar() {
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.remove('opacity-100');
+            setTimeout(() => overlay.classList.add('hidden'), 300);
+            document.body.style.overflow = '';
+        }
+
+        if (hamburgerBtn) hamburgerBtn.addEventListener('click', openSidebar);
+        if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+        if (overlay) overlay.addEventListener('click', closeSidebar);
+
+        // Init page load
+        applyTheme();
+        const savedRTL = localStorage.getItem("clearsound-rtl");
+        if (savedRTL) htmlElement.setAttribute("dir", savedRTL);
+    </script>
+</body>
+</html>

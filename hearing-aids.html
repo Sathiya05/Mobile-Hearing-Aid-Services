@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hearing Aids | ClearSound Mobile Hearing Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/logo.jpeg">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: '#14b8a6',
+            softblue: '#3b82f6',
+            green: '#10b981',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap');
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    .transition-theme { transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease; }
+    .bg-dot-pattern {
+      background-image: radial-gradient(rgba(59, 130, 246, 0.15) 1.5px, transparent 1.5px);
+      background-size: 32px 32px;
+    }
+    .dark .bg-dot-pattern {
+      background-image: radial-gradient(rgba(20, 184, 166, 0.15) 1.5px, transparent 1.5px);
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans transition-theme overflow-x-hidden">
+  <div id="navbar"></div>
+
+  <!-- 1. HERO SECTION -->
+<section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden transition-theme bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+    <div class="absolute inset-0 bg-dot-pattern z-0 pointer-events-none opacity-60"></div>
+    <div class="absolute top-40 left-1/4 w-80 h-80 bg-teal/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse dark:bg-teal/10 z-0"></div>
+    <div class="absolute bottom-10 right-1/3 w-96 h-96 bg-green/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse dark:bg-green/10 z-0"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 mb-6 shadow-sm">
+            <i class="fa-solid fa-ear-deaf text-teal text-sm"></i>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">Latest Technology</span>
+          </div>
+          <h1 class="text-5xl xl:text-7xl font-heading font-black text-slate-900 dark:text-white leading-[1.1] mb-6 tracking-tight">
+            Hearing aids<br>
+            <span class="text-teal">made personal.</span>
+          </h1>
+          <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed font-medium">
+            We carry the leading brands and fit devices tailored to your hearing loss, lifestyle, and budget — all from the comfort of your home.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 w-full sm:w-auto">
+            <a href="book.html" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-teal text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(20,184,166,0.3)]">
+              <span>Book a Consultation</span>
+              <i class="fa-solid fa-calendar-check"></i>
+            </a>
+            <a href="tel:+1234567890" class="flex items-center justify-center px-8 py-4 rounded-xl bg-white dark:bg-slate-800 border-2 border-softblue text-softblue dark:text-white font-bold text-sm hover:bg-softblue hover:text-white transition-colors duration-300 shadow-sm gap-2">
+              <i class="fa-solid fa-phone"></i> Call (123) 456-7890
+            </a>
+          </div>
+        </div>
+
+        <!-- REIMAGINED IMAGE SIDE -->
+        <div class="relative w-full h-[400px] xl:h-[500px] hidden lg:block">
+          
+          <!-- Layered Depth Effect (Behind image) -->
+          <div class="absolute inset-x-6 inset-y-12 z-0 bg-slate-100 dark:bg-slate-800/60 rounded-[2.5rem] transform rotate-[4deg]"></div>
+          
+          <!-- Angular Image Container -->
+          <div class="absolute inset-0 z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/50 dark:border-slate-700/50 transform rotate-0  transition-transform duration-500 ease-in-out">
+            <img src="images\img5.avif" alt="Modern hearing aid" class="w-full h-full object-cover">
+            
+            <!-- Integrated Bluetooth Bar (Bottom of image) -->
+            <div class="absolute bottom-3 left-3 right-3 z-20 px-6 py-4 rounded-2xl bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg border border-white/50 dark:border-slate-700/50 shadow-sm flex items-center gap-4">
+              <div class="w-11 h-11 rounded-full bg-green flex items-center justify-center text-white text-lg">
+                <i class="fa-solid fa-bluetooth-b"></i>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-900 dark:text-white">Bluetooth Enabled</p>
+                <p class="text-xs font-medium text-slate-500 dark:text-slate-400">Stream calls & music directly</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Graphic Elements (Optional depth details) -->
+          <div class="absolute -top-10 -right-10 z-0 w-24 h-24 border-4 border-teal rounded-full opacity-20"></div>
+          <div class="absolute -bottom-8 -left-8 z-0 w-16 h-16 border-4 border-green rounded-full opacity-15"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 2. BRANDS WE CARRY -->
+  <section class="py-24 bg-white dark:bg-slate-950 transition-theme">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Trusted Brands</span>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">World-class manufacturers</h2>
+        <p class="text-slate-600 dark:text-slate-400 font-medium">We are independently partnered with the industry's most trusted hearing aid brands.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center hover:-translate-y-1 transition-all duration-300">
+          <div class="text-4xl font-heading font-black text-teal mb-3">P</div>
+          <h4 class="font-bold text-slate-900 dark:text-white">Phonak</h4>
+          <p class="text-xs text-slate-500 mt-1">Swiss Precision</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center hover:-translate-y-1 transition-all duration-300">
+          <div class="text-4xl font-heading font-black text-softblue mb-3">O</div>
+          <h4 class="font-bold text-slate-900 dark:text-white">Oticon</h4>
+          <p class="text-xs text-slate-500 mt-1">BrainHearing™</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center hover:-translate-y-1 transition-all duration-300">
+          <div class="text-4xl font-heading font-black text-green mb-3">R</div>
+          <h4 class="font-bold text-slate-900 dark:text-white">ReSound</h4>
+          <p class="text-xs text-slate-500 mt-1">Natural Sound</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-center hover:-translate-y-1 transition-all duration-300">
+          <div class="text-4xl font-heading font-black text-teal mb-3">S</div>
+          <h4 class="font-bold text-slate-900 dark:text-white">Signia</h4>
+          <p class="text-xs text-slate-500 mt-1">Innovation Leader</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TYPES OF HEARING AIDS -->
+  <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Styles</span>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">Find the right style for you</h2>
+        <p class="text-slate-600 dark:text-slate-400 font-medium">From nearly invisible to powerful behind-the-ear devices, we have a style to match your preferences.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- BTE Card -->
+        <div class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:-translate-y-2 transition-all duration-300 shadow-sm flex flex-col">
+          <div class="w-14 h-14 rounded-full bg-teal/10 text-teal flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-circle-dot"></i>
+          </div>
+          
+          <div class="mb-5 rounded-xl overflow-hidden aspect-[4/3] border border-slate-100 dark:border-slate-700">
+            <img src="images\behind the ear.avif" alt="Behind-the-Ear (BTE) hearing aid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Behind-the-Ear (BTE)</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Classic power and reliability. The device rests behind your ear with a thin tube delivering sound into the ear canal. Ideal for moderate to severe hearing loss.</p>
+          <ul class="space-y-2 text-xs text-slate-500 mt-auto">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-battery-full text-teal"></i> Long battery life</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-hand-sparkles text-teal"></i> Easy to handle</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-wifi text-teal"></i> Bluetooth streaming</li>
+          </ul>
+        </div>
+
+        <!-- ITE Card -->
+        <div class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:-translate-y-2 transition-all duration-300 shadow-sm flex flex-col">
+          <div class="w-14 h-14 rounded-full bg-softblue/10 text-softblue flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </div>
+          
+          <div class="mb-5 rounded-xl overflow-hidden aspect-[4/3] border border-slate-100 dark:border-slate-700">
+            <img src="images\in the ear.avif" alt="In-the-Ear (ITE) device" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">In-the-Ear (ITE)</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Custom-molded to fit inside your ear. Less visible than BTE and easy to insert. Great for mild to moderate hearing loss with dexterity considerations.</p>
+          <ul class="space-y-2 text-xs text-slate-500 mt-auto">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-user-check text-softblue"></i> Custom fit</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-eye-slash text-softblue"></i> Discreet design</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-microchip text-softblue"></i> Advanced features</li>
+          </ul>
+        </div>
+
+        <!-- CIC Card -->
+        <div class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:-translate-y-2 transition-all duration-300 shadow-sm flex flex-col">
+          <div class="w-14 h-14 rounded-full bg-green/10 text-green flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-circle"></i>
+          </div>
+          
+          <div class="mb-5 rounded-xl overflow-hidden aspect-[4/3] border border-slate-100 dark:border-slate-700">
+            <img src="images\img8.avif" alt="Close up of ear showing tiny hidden device profile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+
+          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Completely-in-Canal</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Our most invisible option. Sits deep inside the ear canal, completely hidden from view. Perfect for those who want discretion without performance.</p>
+          <ul class="space-y-2 text-xs text-slate-500 mt-auto">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-mask text-green"></i> Nearly invisible</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-wind text-green"></i> Less wind noise</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-green"></i> Natural phone use</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+  <!-- 4. TECHNOLOGY LEVELS -->
+  <section class="py-24 bg-white dark:bg-slate-950 transition-theme">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Technology</span>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">Choose your technology level</h2>
+        <p class="text-slate-600 dark:text-slate-400 font-medium">From essential to premium — we help you find the right balance of features and value.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:-translate-y-2 transition-all duration-300 shadow-sm">
+          <div class="text-teal font-heading font-black text-2xl mb-2">Essential</div>
+          <div class="text-sm text-slate-500 font-bold mb-6">Entry-level performance</div>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Basic noise reduction</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Fixed directional microphones</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Manual volume control</li>
+            <li class="flex items-center gap-3 opacity-40"><i class="fa-solid fa-xmark-circle"></i> No Bluetooth streaming</li>
+            <li class="flex items-center gap-3 opacity-40"><i class="fa-solid fa-xmark-circle"></i> No rechargeable option</li>
+          </ul>
+          <p class="text-xs text-slate-500">Best for: Mild hearing loss, budget-conscious</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border-2 border-teal dark:border-teal hover:-translate-y-2 transition-all duration-300 shadow-lg relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-teal text-white text-xs font-bold uppercase">Recommended</div>
+          <div class="text-teal font-heading font-black text-2xl mb-2">Advanced</div>
+          <div class="text-sm text-slate-500 font-bold mb-6">Best value & features</div>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Adaptive noise reduction</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Automatic directional microphones</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Bluetooth streaming</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Rechargeable option available</li>
+            <li class="flex items-center gap-3 opacity-40"><i class="fa-solid fa-xmark-circle"></i> No AI environment detection</li>
+          </ul>
+          <p class="text-xs text-slate-500">Best for: Moderate hearing loss, active lifestyle</p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:-translate-y-2 transition-all duration-300 shadow-sm">
+          <div class="text-teal font-heading font-black text-2xl mb-2">Premium</div>
+          <div class="text-sm text-slate-500 font-bold mb-6">Cutting-edge technology</div>
+          <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> AI-powered sound optimization</li>
+            <li class="flex items-center gap-3"><i class="fa-solidfa-check-circle text-teal"></i> Auto environment detection</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Multi-device Bluetooth</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Rechargeable with 30h battery</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-teal"></i> Telehealth remote adjustments</li>
+          </ul>
+          <p class="text-xs text-slate-500">Best for: Active seniors, tech enthusiasts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FEATURES HIGHLIGHT -->
+<section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Features</span>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">Modern features for modern life</h2>
+        <p class="text-slate-600 dark:text-slate-400 font-medium">Today's hearing aids are smarter and more convenient than ever before.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+        
+        <!-- Bluetooth Streaming -->
+        <div class="group p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-md">
+          <div class="mb-6 rounded-xl overflow-hidden aspect-[4/3] border border-slate-100 dark:border-slate-700">
+            <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=400&q=80" alt="Person happily using a smartphone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="w-12 h-12 rounded-full bg-teal/10 text-teal flex items-center justify-center text-xl mx-auto mb-4">
+            <i class="fa-solid fa-bluetooth-b"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-2">Bluetooth Streaming</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-auto">Stream phone calls, music, and TV audio directly to your hearing aids.</p>
+        </div>
+
+        <!-- Rechargeable -->
+        <div class="group p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-md">
+          <div class="mb-6 rounded-xl overflow-hidden aspect-[4/3] border border-slate-100 dark:border-slate-700">
+            <img src="images\img6.webp" alt="Sleek charging case for modern electronics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="w-12 h-12 rounded-full bg-softblue/10 text-softblue flex items-center justify-center text-xl mx-auto mb-4">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-2">Rechargeable</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-auto">No more fumbling with tiny batteries. Just drop them on the charger overnight.</p>
+        </div>
+
+        <!-- App Control -->
+        <div class="group p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-md">
+          <div class="mb-6 rounded-xl overflow-hidden aspect-[4/3] border border-slate-100 dark:border-slate-700">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80" alt="Hand holding a smartphone with an app" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="w-12 h-12 rounded-full bg-green/10 text-green flex items-center justify-center text-xl mx-auto mb-4">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-2">App Control</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-auto">Adjust volume, programs, and find lost hearing aids from your smartphone.</p>
+        </div>
+
+        <!-- AI Environment Detection -->
+        <div class="group p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center flex flex-col hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-md">
+          <div class="mb-6 rounded-xl overflow-hidden aspect-[4/3] border border-slate-100 dark:border-slate-700">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80" alt="Lively restaurant environment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="w-12 h-12 rounded-full bg-teal/10 text-teal flex items-center justify-center text-xl mx-auto mb-4">
+            <i class="fa-solid fa-cloud-sun"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-2">AI Environment</h4>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-auto">Hearing aids automatically adjust to restaurants, wind, traffic, and quiet rooms.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. COMPARISON TABLE -->
+  <section class="py-24 bg-white dark:bg-slate-950 transition-theme">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Compare</span>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">Hearing aids at a glance</h2>
+      </div>
+
+      <!-- Mobile: stacked tier cards -->
+      <div class="md:hidden space-y-5 max-w-lg mx-auto">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+          <div class="bg-teal text-white px-5 py-4 text-center">
+            <h3 class="font-bold text-lg">Essential</h3>
+            <p class="text-teal-100 text-sm mt-0.5">$799-$1,199 per aid</p>
+          </div>
+          <div class="divide-y divide-slate-200 dark:divide-slate-700 bg-white dark:bg-slate-800">
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Noise Reduction</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">Basic</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Bluetooth</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">—</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Rechargeable</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">—</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">App Control</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">—</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Telehealth</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border-2 border-teal dark:border-teal shadow-lg overflow-hidden relative">
+          <div class="bg-teal text-white px-5 py-4 text-center">
+            <h3 class="font-bold text-lg">Advanced</h3>
+            <p class="text-teal-100 text-sm mt-0.5">$1,499-$1,999 per aid</p>
+          </div>
+          <div class="divide-y divide-slate-200 dark:divide-slate-700 bg-white dark:bg-slate-800">
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Noise Reduction</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">Adaptive</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Bluetooth</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">Streaming</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Rechargeable</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">Optional</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">App Control</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">Basic</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Telehealth</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+          <div class="bg-teal text-white px-5 py-4 text-center">
+            <h3 class="font-bold text-lg">Premium</h3>
+            <p class="text-teal-100 text-sm mt-0.5">$2,299-$3,299 per aid</p>
+          </div>
+          <div class="divide-y divide-slate-200 dark:divide-slate-700 bg-white dark:bg-slate-800">
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Noise Reduction</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">AI-Powered</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Bluetooth</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">Multi-Device</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Rechargeable</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">30h Battery</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">App Control</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">Full</span>
+            </div>
+            <div class="flex justify-between px-5 py-3.5 bg-slate-50 dark:bg-slate-900">
+              <span class="font-medium text-slate-900 dark:text-white text-sm">Telehealth</span>
+              <span class="text-slate-600 dark:text-slate-400 text-sm">Remote Tuning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tablet/Desktop: table -->
+      <div class="hidden md:block">
+        <table class="w-full text-sm rounded-2xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700">
+          <thead>
+            <tr class="bg-teal text-white">
+              <th class="p-4 text-left font-bold">Feature</th>
+              <th class="p-4 text-center font-bold">Essential</th>
+              <th class="p-4 text-center font-bold">Advanced</th>
+              <th class="p-4 text-center font-bold">Premium</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+            <tr class="bg-slate-50 dark:bg-slate-900">
+              <td class="p-4 font-medium text-slate-900 dark:text-white">Noise Reduction</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">Basic</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">Adaptive</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">AI-Powered</td>
+            </tr>
+            <tr class="bg-white dark:bg-slate-950">
+              <td class="p-4 font-medium text-slate-900 dark:text-white">Bluetooth</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">—</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">Streaming</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">Multi-Device</td>
+            </tr>
+            <tr class="bg-slate-50 dark:bg-slate-900">
+              <td class="p-4 font-medium text-slate-900 dark:text-white">Rechargeable</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">—</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">Optional</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">30h Battery</td>
+            </tr>
+            <tr class="bg-white dark:bg-slate-950">
+              <td class="p-4 font-medium text-slate-900 dark:text-white">App Control</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">—</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">Basic</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">Full</td>
+            </tr>
+            <tr class="bg-slate-50 dark:bg-slate-900">
+              <td class="p-4 font-medium text-slate-900 dark:text-white">Telehealth</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">—</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">—</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">Remote Tuning</td>
+            </tr>
+            <tr class="bg-white dark:bg-slate-950">
+              <td class="p-4 font-medium text-slate-900 dark:text-white">Price Range (per aid)</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">$799-$1,199</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">$1,499-$1,999</td>
+              <td class="p-4 text-center text-slate-600 dark:text-slate-400">$2,299-$3,299</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CTA -->
+  <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
+      <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-teal to-green p-10 md:p-16 text-center shadow-2xl">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl mix-blend-overlay pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl mix-blend-overlay pointer-events-none"></div>
+        <div class="relative z-10 max-w-2xl mx-auto text-white">
+          <h2 class="text-4xl md:text-5xl font-heading font-black mb-6">Try hearing aids in your own home</h2>
+          <p class="text-lg font-medium mb-10">Schedule a free no-obligation demonstration. We will bring the latest devices to your living room.</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="book.html" class="px-8 py-4 rounded-xl bg-slate-900 text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-xl">Book Free Demo</a>
+            <a href="tel:+1234567890" class="px-8 py-4 rounded-xl border-2 border-white text-white font-bold text-sm hover:bg-white hover:text-teal transition-colors duration-300">Call (123) 456-7890</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+</html>

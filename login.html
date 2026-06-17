@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | ClearSound</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.jpeg">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: '#14b8a6',
+            softblue: '#3b82f6',
+            green: '#10b981',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap');
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .transition-theme {
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    }
+
+    .toggle-btn {
+      transition: all 0.3s ease;
+    }
+    .toggle-btn:hover {
+      border-color: #14b8a6;
+      color: #14b8a6;
+    }
+    .dark .toggle-btn:hover {
+      color: #14b8a6;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans transition-theme min-h-screen flex flex-col">
+
+  <div class="fixed top-6 left-6 z-[100]">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-12 h-12 rounded-xl bg-teal flex items-center justify-center shadow-lg shadow-teal/20 group-hover:scale-105 transition-transform">
+        <i class="fa-solid fa-ear-listen text-white text-xl"></i>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-2xl font-black tracking-tight text-slate-900 dark:text-white transition-colors">
+          Clear<span class="text-teal">Sound</span>
+        </span>
+        <span class="text-[10px] tracking-[0.15em] uppercase text-slate-500 dark:text-slate-400 font-bold leading-none mt-1">
+          Hearing Services
+        </span>
+      </div>
+    </a>
+  </div>
+
+  <div class="fixed top-6 right-6 z-[100] flex items-center gap-2">
+    <button id="rtlToggle" class="toggle-btn w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-600 dark:text-slate-400 shadow-sm" title="Toggle RTL">
+      <i class="fa-solid fa-arrow-right-arrow-left"></i>
+    </button>
+    <button id="darkToggle" class="toggle-btn w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-600 dark:text-slate-400 shadow-sm">
+      <i id="darkIcon" class="fa-solid fa-moon"></i>
+    </button>
+  </div>
+
+  <div class="flex-1 flex items-center justify-center p-4 sm:p-6 pt-20 sm:pt-6 relative overflow-hidden">
+
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal/15 rounded-full blur-[100px] pointer-events-none dark:bg-teal/10"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[400px] bg-softblue/10 rounded-full blur-[120px] pointer-events-none dark:bg-softblue/10"></div>
+
+    <div class="w-full max-w-[440px] relative z-10">
+
+      <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl p-6 md:p-10 transition-theme">
+
+        <div class="text-center mb-8">
+          <h1 class="text-2xl md:text-3xl font-heading font-bold text-slate-900 dark:text-white mb-2">Welcome Back</h1>
+          <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Sign in to manage your hearing health</p>
+        </div>
+
+        <form class="space-y-5">
+          <div>
+            <label for="email" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Email Address</label>
+            <div class="relative">
+              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" id="email" placeholder="you@example.com" class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all text-sm font-medium">
+            </div>
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Password</label>
+            <div class="relative">
+              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"><i class="fa-solid fa-lock"></i></span>
+              <input type="password" id="password" placeholder="••••••••" class="w-full pl-11 pr-11 py-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all text-sm font-medium">
+              <button type="button" id="togglePassword" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-teal transition-colors">
+                <i id="togglePasswordIcon" class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-sm">
+            <label class="flex items-center gap-2 cursor-pointer group">
+              <input type="checkbox" class="w-4 h-4 rounded border-slate-300 dark:border-slate-600 text-teal focus:ring-teal/30 cursor-pointer">
+              <span class="text-slate-600 dark:text-slate-400 group-hover:text-slate-800 dark:group-hover:text-white transition-colors font-medium">Remember me</span>
+            </label>
+            <a href="#" class="text-teal font-bold hover:text-softblue transition-colors">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-teal text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-teal/30 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <span>Log In</span>
+          </button>
+        </form>
+
+        <div class="relative my-7">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200 dark:border-slate-700"></div></div>
+          <div class="relative flex justify-center"><span class="bg-white dark:bg-slate-900 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">or continue with</span></div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <button class="flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-sm hover:border-teal hover:text-teal dark:hover:text-teal transition-all">
+            <i class="fa-brands fa-google"></i> Google
+          </button>
+          <button class="flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-sm hover:border-softblue hover:text-softblue dark:hover:text-softblue transition-all">
+            <i class="fa-brands fa-apple"></i> Apple
+          </button>
+        </div>
+
+        <p class="text-center mt-7 text-sm text-slate-500 dark:text-slate-400 font-medium">
+          Don't have an account?
+          <a href="signup.html" class="text-teal font-bold hover:text-softblue transition-colors ml-1">Create Account</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme Toggle
+    const darkToggle = document.getElementById('darkToggle');
+    const darkIcon = document.getElementById('darkIcon');
+    const rtlToggle = document.getElementById('rtlToggle');
+
+    const updateIcons = (isDark) => {
+      darkIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    };
+
+    darkToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('clearsound-theme', isDark ? 'dark' : 'light');
+      updateIcons(isDark);
+    });
+
+    rtlToggle.addEventListener('click', () => {
+      const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+      document.documentElement.setAttribute('dir', isRtl ? 'ltr' : 'rtl');
+      localStorage.setItem('clearsound-rtl', isRtl ? 'ltr' : 'rtl');
+    });
+
+    if (localStorage.getItem('clearsound-theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+      updateIcons(true);
+    }
+    if (localStorage.getItem('clearsound-rtl') === 'rtl') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+
+    // Password toggle
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const togglePasswordIcon = document.getElementById('togglePasswordIcon');
+
+    togglePassword.addEventListener('click', () => {
+      const isPassword = passwordInput.type === 'password';
+      passwordInput.type = isPassword ? 'text' : 'password';
+      togglePasswordIcon.className = isPassword ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
+    });
+  </script>
+
+</body>
+</html>

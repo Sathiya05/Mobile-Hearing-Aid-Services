@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Page Not Found | ClearSound</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="images/logo.jpeg">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: '#14b8a6',
+            softblue: '#3b82f6',
+            green: '#10b981',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap');
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .transition-theme {
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    }
+
+    .toggle-btn {
+      transition: all 0.3s ease;
+    }
+    .toggle-btn:hover {
+      border-color: #14b8a6;
+      color: #14b8a6;
+    }
+    .dark .toggle-btn:hover {
+      color: #14b8a6;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans transition-theme min-h-[100dvh] flex flex-col overflow-x-hidden relative">
+
+
+  <main class="flex-1 flex items-center justify-center p-4 sm:p-6 pt-24 pb-12 relative w-full z-10">
+
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] sm:w-[500px] h-[300px] bg-teal/10 rounded-full blur-[80px] sm:blur-[100px] pointer-events-none dark:bg-teal/5 z-0"></div>
+    
+    <div class="relative z-10 text-center max-w-lg mx-auto w-full px-4">
+      
+      <div class="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-slate-200/50 dark:bg-slate-800/50 text-teal mb-6 sm:mb-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <i class="fa-solid fa-map-location-dot text-3xl sm:text-4xl"></i>
+      </div>
+
+      <h1 class="text-7xl sm:text-8xl md:text-9xl font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-teal to-softblue mb-2 sm:mb-4 tracking-tight leading-none">
+        404
+      </h1>
+      
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-slate-900 dark:text-white mb-4 sm:mb-5">
+        Lost your connection?
+      </h2>
+      
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-8 sm:mb-10 font-medium leading-relaxed">
+        The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back to hearing clearly.
+      </p>
+      
+      <a href="index.html" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 sm:py-4 rounded-xl bg-teal text-white font-bold text-sm hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_30px_rgba(20,184,166,0.25)] w-full sm:w-auto">
+        <i class="fa-solid fa-house"></i>
+        <span>Return to Homepage</span>
+      </a>
+
+    </div>
+  </main>
+
+  <script>
+    // Theme Toggle Logic
+    const darkToggle = document.getElementById('darkToggle');
+    const darkIcon = document.getElementById('darkIcon');
+    const rtlToggle = document.getElementById('rtlToggle');
+
+    const updateIcons = (isDark) => {
+      darkIcon.className = isDark ? 'fa-solid fa-sun text-sm' : 'fa-solid fa-moon text-sm';
+    };
+
+    darkToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('clearsound-theme', isDark ? 'dark' : 'light');
+      updateIcons(isDark);
+    });
+
+    rtlToggle.addEventListener('click', () => {
+      const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+      document.documentElement.setAttribute('dir', isRtl ? 'ltr' : 'rtl');
+      localStorage.setItem('clearsound-rtl', isRtl ? 'ltr' : 'rtl');
+    });
+
+    // Initialize state on load
+    if (localStorage.getItem('clearsound-theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+      updateIcons(true);
+    }
+    if (localStorage.getItem('clearsound-rtl') === 'rtl') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+  </script>
+
+</body>
+</html>
