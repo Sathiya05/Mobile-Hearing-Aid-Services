@@ -75,11 +75,11 @@
                 Book a Visit <i class="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300"></i>
               </span>
             </a>
-            <a href="tel:+1234567890" class="flex items-center gap-3 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:text-teal dark:hover:text-teal transition-colors duration-300">
-              <div class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-md flex items-center justify-center text-teal">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              (123) 456-7890
+            <a href="tel:+1234567890" class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-semibold text-sm overflow-hidden transition-all hover:border-teal hover:text-teal dark:hover:text-teal">
+              <span class="absolute inset-0 w-full h-full bg-teal/0 transition-all duration-300 ease-out group-hover:bg-teal/5"></span>
+              <span class="relative z-10 flex items-center gap-2">
+                <i class="fa-solid fa-phone"></i> (123) 456-7890
+              </span>
             </a>
           </div>
         </div>
@@ -373,8 +373,12 @@
           <p class="text-lg font-medium mb-10 text-teal-50">Experience the ClearSound difference. Schedule a home visit and take the first step toward better hearing.</p>
           <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a href="book.html" class="px-8 py-4 rounded-xl bg-slate-900 text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-xl">Book an Appointment</a>
-            <a href="tel:+1234567890" class="px-8 py-4 rounded-xl border-2 border-white text-white font-bold text-sm hover:bg-white hover:text-teal transition-colors duration-300">Call (123) 456-7890</a>
-          </div>
+  <a href="tel:+1234567890" class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border-2 border-slate-300 dark:border-slate-600 text-slate-200 dark:text-slate-300 font-semibold text-sm overflow-hidden transition-all ">
+              <span class="absolute inset-0 w-full h-full bg-teal/0 transition-all duration-300 ease-out group-hover:bg-teal/5"></span>
+              <span class="relative z-10 flex items-center gap-2">
+                <i class="fa-solid fa-phone"></i> (123) 456-7890
+              </span>
+            </a>          </div>
         </div>
       </div>
     </div>

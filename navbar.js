@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
             </button>
           </div>
           <div class="flex items-center gap-3 ml-2">
-              <a href="login.html" class="flex items-center justify-center px-5 py-2.5 rounded-xl border-2 border-[#3b82f6] text-[#3b82f6] font-bold text-sm bg-transparent hover:bg-[#3b82f6] hover:text-white transition-all duration-300 gap-2">
+              <a href="login.html" class="flex items-center justify-center px-5 py-2.5 rounded-xl border-2 border-[#14b8a6] text-[#14b8a6] font-bold text-sm bg-transparent hover:bg-[#14b8a6] hover:text-white transition-all duration-300 gap-2">
                   <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
               </a>
-              <a href="signup.html" class="flex items-center justify-center px-6 py-2.5 rounded-xl bg-[#10b981] text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-lg shadow-[#10b981]/20">Sign Up</a>
+              <a href="signup.html" class="flex items-center justify-center px-5 py-2.5 rounded-xl border-2 border-transparent bg-[#10b981] text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-lg shadow-[#10b981]/20">Sign Up</a>
           </div>
         </div>
 
@@ -141,8 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </button>
       </div>
       <div class="flex flex-col gap-3">
-        <a href="login.html" class="w-full py-4 flex items-center justify-center gap-2 rounded-xl bg-transparent border-2 border-[#3b82f6] text-[#3b82f6] font-bold text-sm shadow-sm hover:bg-[#3b82f6] hover:text-white transition-all"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
-        <a href="signup.html" class="w-full py-4 flex items-center justify-center rounded-xl bg-[#10b981] text-white font-bold text-sm shadow-lg shadow-[#10b981]/20">Sign Up</a>
+        <a href="login.html" class="w-full py-4 flex items-center justify-center gap-2 rounded-xl bg-transparent border-2 border-[#14b8a6] text-[#14b8a6] font-bold text-sm shadow-sm hover:bg-[#14b8a6] hover:text-white transition-all"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+        <a href="signup.html" class="w-full py-4 flex items-center justify-center rounded-xl border-2 border-transparent bg-[#10b981] text-white font-bold text-sm shadow-lg shadow-[#10b981]/20">Sign Up</a>
       </div>
     </div>
   </div>
