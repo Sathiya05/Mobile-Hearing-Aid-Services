@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <form class="flex flex-col gap-3" id="newsletterForm"> <!--[cite: 2] -->
         <div class="relative">
-          <input type="email" required placeholder="Enter your email address..." class="w-full px-4 py-3.5 rounded-xl bg-white dark:bg-slate-950 text-slate-900 dark:text-white border border-gray-200 dark:border-slate-800 focus:outline-none focus:border-[#3b82f6] dark:focus:border-[#14b8a6] transition-all font-medium text-sm shadow-sm"> <!--[cite: 2] -->
+          <input type="email" required placeholder="Enter your email address..." class="w-full px-4 py-3.5 rounded-xl bg-white dark:bg-slate-950 text-slate-900 dark:text-white border border-gray-200 dark:border-slate-800 focus:outline-none focus:border-[#14b8a6] dark:focus:border-[#14b8a6] transition-all font-medium text-sm shadow-sm"> <!--[cite: 2] -->
         </div>
         <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm bg-[#10b981] dark:bg-[#14b8a6] text-white dark:text-black transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-lg shadow-black/5 dark:shadow-[#14b8a6]/10 flex items-center justify-center gap-2"> <!--[cite: 2] -->
           <span>Subscribe Now</span>
@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>© ${new Date().getFullYear()} ClearSound Mobile Hearing Services. All rights reserved.</p> <!--[cite: 2] -->
 
       <div class="flex gap-6"> <!--[cite: 2] -->
-        <a href="#" class="hover:text-[#3b82f6] dark:hover:text-[#14b8a6] transition-colors duration-300">Privacy Policy</a>
-        <a href="#" class="hover:text-[#3b82f6] dark:hover:text-[#14b8a6] transition-colors duration-300">Terms of Service</a>
+        <a href="#" class="hover:text-[#14b8a6] dark:hover:text-[#14b8a6] transition-colors duration-300">Privacy Policy</a>
+        <a href="#" class="hover:text-[#14b8a6] dark:hover:text-[#14b8a6] transition-colors duration-300">Terms of Service</a>
       </div>
     </div>
   </div>
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerStyles = document.createElement('style'); //[cite: 2]
   footerStyles.textContent = `
     .footer-link:hover {
-      color: #3b82f6 !important; /* Soft Blue */
+      color: #14b8a6 !important; /* Soft Blue */
       transform: translateX(6px);
     }
     

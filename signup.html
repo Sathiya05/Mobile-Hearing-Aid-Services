@@ -17,7 +17,6 @@
         extend: {
           colors: {
             teal: '#14b8a6',
-            softblue: '#3b82f6',
             green: '#10b981',
           },
           fontFamily: {
@@ -56,48 +55,38 @@
 
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans transition-theme min-h-[100dvh] flex flex-col overflow-x-hidden relative">
 
-  <!-- Header Container (Now Fixed and Sticky with a frosted glass effect so content scrolling underneath looks clean) -->
-  <header class="fixed top-0 left-0 w-full flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 z-[100]  border-b border-slate-200/60 dark:border-slate-800/60 transition-theme">
-    
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center gap-2 sm:gap-3 group">
-      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-teal flex items-center justify-center shadow-lg shadow-teal/20 group-hover:scale-105 transition-transform shrink-0">
-        <i class="fa-solid fa-ear-listen text-white text-lg sm:text-xl"></i>
-      </div>
-      <div class="flex flex-col">
-        <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white transition-colors">
-          Clear<span class="text-teal">Sound</span>
-        </span>
-        <span class="text-[9px] sm:text-[10px] tracking-[0.15em] uppercase text-slate-500 dark:text-slate-400 font-bold leading-none mt-1">
-          Mobile Hearing
-        </span>
-      </div>
-    </a>
-
-    <!-- Toggles -->
-    <div class="flex items-center gap-2">
-      <button id="rtlToggle" class="toggle-btn w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-600 dark:text-slate-400 shadow-sm" title="Toggle RTL">
-        <i class="fa-solid fa-arrow-right-arrow-left text-sm"></i>
-      </button>
-      <button id="darkToggle" class="toggle-btn w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-600 dark:text-slate-400 shadow-sm">
-        <i id="darkIcon" class="fa-solid fa-moon text-sm"></i>
-      </button>
-    </div>
-
-  </header>
+  <div class="fixed top-6 right-6 z-[100] flex items-center gap-2">
+    <button id="rtlToggle" class="toggle-btn w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-600 dark:text-slate-400 shadow-sm" title="Toggle RTL">
+      <i class="fa-solid fa-arrow-right-arrow-left"></i>
+    </button>
+    <button id="darkToggle" class="toggle-btn w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-600 dark:text-slate-400 shadow-sm">
+      <i id="darkIcon" class="fa-solid fa-moon"></i>
+    </button>
+  </div>
 
   <!-- Main Content Area -->
   <div class="flex-1 flex items-center justify-center p-4 sm:p-6 pt-24 pb-8 sm:pt-32 relative w-full z-10">
 
     <!-- Scaled Background Blurs for Mobile -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] sm:w-[800px] h-[300px] sm:h-[400px] bg-teal/15 rounded-full blur-[80px] sm:blur-[100px] pointer-events-none dark:bg-teal/10 z-0"></div>
-    <div class="absolute bottom-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[400px] bg-softblue/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none dark:bg-softblue/10 z-0"></div>
+    <div class="absolute bottom-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[400px] bg-teal/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none dark:bg-teal/10 z-0"></div>
 
     <div class="w-full max-w-[480px] relative z-10">
 
       <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl p-5 sm:p-8 transition-theme">
 
         <div class="text-center mb-6">
+          <a href="index.html" class="inline-flex items-center gap-3 group mb-6">
+            <div class="w-12 h-12 rounded-xl bg-teal flex items-center justify-center shadow-lg shadow-teal/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-ear-listen text-white text-xl"></i>
+            </div>
+            <div class="flex flex-col text-left">
+              <span class="text-2xl font-black tracking-tight text-slate-900 dark:text-white transition-colors">
+                Clear<span class="text-teal">Sound</span>
+              </span>
+              <span class="text-[10px] tracking-[0.15em] uppercase text-slate-500 dark:text-slate-400 font-bold leading-none mt-1">Hearing Services</span>
+            </div>
+          </a>
           <h1 class="text-2xl md:text-3xl font-heading font-bold text-slate-900 dark:text-white mb-1">Create Account</h1>
           <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Join ClearSound for better hearing care</p>
         </div>
@@ -110,17 +99,13 @@
 
           <div>
             <label for="email" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Email Address</label>
-            <div class="relative">
-              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></span>
-              <input type="email" id="email" placeholder="you@example.com" class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all text-sm font-medium">
-            </div>
+            <input type="email" id="email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all text-sm font-medium">
           </div>
 
           <div>
             <label for="password" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Password</label>
             <div class="relative">
-              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></span>
-              <input type="password" id="password" placeholder="Create a strong password" class="w-full pl-11 pr-11 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all text-sm font-medium">
+              <input type="password" id="password" placeholder="Create a strong password" class="w-full px-4 pr-11 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all text-sm font-medium">
               <button type="button" id="togglePassword" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-teal transition-colors">
                 <i id="togglePasswordIcon" class="fa-solid fa-eye"></i>
               </button>
@@ -130,9 +115,7 @@
           <div>
             <label for="confirmPassword" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-1.5">Confirm Password</label>
             <div class="relative">
-              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
-              </span>
-              <input type="password" id="confirmPassword" placeholder="Re-enter password" class="w-full pl-11 pr-11 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all text-sm font-medium">
+              <input type="password" id="confirmPassword" placeholder="Re-enter password" class="w-full px-4 pr-11 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all text-sm font-medium">
               <button type="button" id="toggleConfirmPassword" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-teal transition-colors">
                 <i id="toggleConfirmPasswordIcon" class="fa-solid fa-eye"></i>
               </button>
@@ -143,9 +126,9 @@
             <input type="checkbox" id="terms" class="w-4 h-4 mt-0.5 rounded border-slate-300 dark:border-slate-600 text-teal focus:ring-teal/30 cursor-pointer shrink-0">
             <label for="terms" class="text-xs text-slate-500 dark:text-slate-400 font-medium cursor-pointer leading-tight">
               I agree to the
-              <a href="#" class="text-teal font-bold hover:text-softblue transition-colors">Terms of Service</a>
+              <a href="#" class="text-teal font-bold hover:text-teal transition-colors">Terms of Service</a>
               and
-              <a href="#" class="text-teal font-bold hover:text-softblue transition-colors">Privacy Policy</a>
+              <a href="#" class="text-teal font-bold hover:text-teal transition-colors">Privacy Policy</a>
             </label>
           </div>
 
@@ -164,14 +147,14 @@
           <button class="flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-sm hover:border-teal hover:text-teal dark:hover:text-teal transition-all">
             <i class="fa-brands fa-google"></i> Google
           </button>
-          <button class="flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-sm hover:border-softblue hover:text-softblue dark:hover:text-softblue transition-all">
+          <button class="flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-sm hover:border-teal hover:text-teal dark:hover:text-teal transition-all">
             <i class="fa-brands fa-apple"></i> Apple
           </button>
         </div>
 
         <p class="text-center mt-6 text-sm text-slate-500 dark:text-slate-400 font-medium">
           Already have an account?
-          <a href="login.html" class="text-teal font-bold hover:text-softblue transition-colors ml-1">Log In</a>
+          <a href="login.html" class="text-teal font-bold hover:text-teal transition-colors ml-1">Log In</a>
         </p>
       </div>
     </div>

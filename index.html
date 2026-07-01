@@ -22,7 +22,6 @@
         extend: {
           colors: {
             teal: '#14b8a6',       // Primary Teal
-            softblue: '#3b82f6',   // Secondary Soft Blue
             green: '#10b981',      // Accent Green
           },
           fontFamily: {
@@ -68,7 +67,7 @@
     
     <!-- Animated background blobs for modern feel -->
     <div class="absolute inset-0 bg-dot-pattern z-0 pointer-events-none opacity-60"></div>
-    <div class="absolute top-20 left-1/4 w-96 h-96 bg-softblue/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse dark:bg-softblue/10 z-0"></div>
+    <div class="absolute top-20 left-1/4 w-96 h-96 bg-teal/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse dark:bg-teal/10 z-0"></div>
     <div class="absolute top-40 right-1/4 w-72 h-72 bg-teal/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse dark:bg-teal/10 z-0"></div>
 
     <div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-10">
@@ -90,15 +89,15 @@
           </h1>
 
           <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed font-medium">
-            Skip the waiting room. We bring state-of-the-art audiology clinics directly to your home for comprehensive hearing tests, hearing aid fittings, and professional ear wax removal.
+            Tired of waiting weeks for a clinic appointment? We come to you — same-week availability, no waiting room, and immediate solutions. Get tested, fitted, or treated in under an hour.
           </p>
 
           <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 w-full sm:w-auto">
-            <a href="book.html" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-teal text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(20,184,166,0.3)]">
+            <a href="contact.html" class="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-teal text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(20,184,166,0.3)]">
               <span>Book Home Visit</span>
               <i class="fa-solid fa-calendar-check"></i>
             </a>
-            <a href="tel:+1234567890" class="flex items-center justify-center px-8 py-4 rounded-xl bg-white dark:bg-slate-800 border-2 border-softblue text-softblue dark:text-white font-bold text-sm hover:bg-softblue hover:text-white transition-colors duration-300 shadow-sm gap-2">
+            <a href="tel:+1234567890" class="flex items-center justify-center px-8 py-4 rounded-xl bg-white dark:bg-slate-800 border-2 border-teal text-teal dark:text-white font-bold text-sm hover:bg-teal hover:text-white transition-colors duration-300 shadow-sm gap-2">
               <i class="fa-solid fa-phone"></i> Call (123) 456-7890
             </a>
           </div>
@@ -110,7 +109,7 @@
           <!-- Main Image -->
           <div class="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700">
             <!-- Replace with an actual image of an audiologist with a patient at home -->
-            <img src="images\13.avif" alt="Mobile Hearing Test" class="w-full h-full object-cover">
+            <img src="images\img6.webp" alt="Mobile Hearing Test" class="w-full h-full object-cover">
           </div>
           <!-- Floating Glassmorphism Info Box -->
           <!-- TWEAKED: Adjusted positioning slightly so it doesn't overflow smaller 1024px screens -->
@@ -160,8 +159,8 @@
         </div>
 
         <div class="space-y-6"> <!--[cite: 3] -->
-          <div class="flex gap-4 p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-softblue transition-colors duration-300 shadow-sm">
-            <div class="shrink-0 w-12 h-12 rounded-full bg-softblue/10 flex items-center justify-center text-softblue text-xl">
+          <div class="flex gap-4 p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-teal transition-colors duration-300 shadow-sm">
+            <div class="shrink-0 w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center text-teal text-xl">
               <i class="fa-solid fa-house-medical"></i>
             </div>
             <div>
@@ -210,7 +209,7 @@
           
           <!-- Image Cover -->
           <div class="relative w-full h-52 overflow-hidden transform-gpu">
-            <img src="images\10.avif" alt="Doctor performing hearing test" class="w-full h-full object-cover transition-transform duration-700 scale-105 group-hover:scale-110">
+            <img src="images\img22.webp" alt="Doctor performing hearing test" class="w-full h-full object-cover transition-transform duration-700 scale-105 group-hover:scale-110">
             <!-- Gradient Overlay -->
             <div class="absolute inset-x-0 -bottom-1 top-0 bg-gradient-to-t from-slate-50 dark:from-slate-900 to-transparent opacity-100 pointer-events-none"></div>
           </div>
@@ -218,13 +217,13 @@
           <!-- Content -->
           <div class="p-8 pt-0 relative flex-1 flex flex-col">
             <!-- Floating Icon -->
-            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-slate-800 text-softblue flex items-center justify-center text-2xl mb-6 border border-slate-200 dark:border-slate-700 relative z-10 -mt-7 shadow-md">
+            <div class="w-14 h-14 rounded-2xl bg-white dark:bg-slate-800 text-teal flex items-center justify-center text-2xl mb-6 border border-slate-200 dark:border-slate-700 relative z-10 -mt-7 shadow-md">
               <i class="fa-solid fa-wave-square"></i>
             </div>
 
             <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3 relative z-10">Mobile Hearing Test</h3>
             <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed relative z-10 flex-1">Comprehensive pure-tone audiometry and speech testing performed in a quiet room in your home to accurately diagnose hearing loss.</p>
-            <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white group-hover:text-softblue transition-colors relative z-10 mt-auto">
+            <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white group-hover:text-teal transition-colors relative z-10 mt-auto">
               Learn More <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
@@ -235,7 +234,7 @@
           
           <!-- Image Cover -->
           <div class="relative w-full h-52 overflow-hidden transform-gpu">
-            <img src="images\11.webp" alt="Happy senior with hearing aids" class="w-full h-full object-cover transition-transform duration-700 scale-105 group-hover:scale-110">
+            <img src="images\23.webp" alt="Happy senior with hearing aids" class="w-full h-full object-cover transition-transform duration-700 scale-105 group-hover:scale-110">
             <!-- Gradient Overlay -->
             <div class="absolute inset-x-0 -bottom-1 top-0 bg-gradient-to-t from-slate-50 dark:from-slate-900 to-transparent opacity-100 pointer-events-none"></div>
           </div>
@@ -259,7 +258,7 @@
           
           <!-- Image Cover -->
           <div class="relative w-full h-52 overflow-hidden transform-gpu">
-            <img src="images\12.avif" alt="Medical professional preparing equipment" class="w-full h-full object-cover transition-transform duration-700 scale-105 group-hover:scale-110">
+            <img src="images\24.webp" alt="Medical professional preparing equipment" class="w-full h-full object-cover transition-transform duration-700 scale-105 group-hover:scale-110">
             <!-- Gradient Overlay -->
             <div class="absolute inset-x-0 -bottom-1 top-0 bg-gradient-to-t from-slate-50 dark:from-slate-900 to-transparent opacity-100 pointer-events-none"></div>
           </div>
@@ -282,51 +281,95 @@
     </div>
   </section>
 
-  <!-- 5. HOW IT WORKS SECTION -->
+  <!-- 5. WHY WE'RE DIFFERENT SECTION -->
   <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme">
     <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
-
-      <div class="text-center mb-16"> <!--[cite: 3] -->
-        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">How Mobile Care Works</h2>
-        <p class="text-slate-600 dark:text-slate-400 font-medium">Three simple steps to better hearing without leaving home.</p>
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Why We're Different</span>
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">Mobile care vs. the clinic experience</h2>
       </div>
 
-      <div class="relative max-w-4xl mx-auto"> <!--[cite: 3] -->
-        <!-- Connecting Line -->
-        <div class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-slate-200 dark:bg-slate-700 -translate-y-1/2 z-0"></div>
-
-        <div class="grid md:grid-cols-3 gap-10 relative z-10">
-
-          <!-- Step 1 -->
-          <div class="group flex flex-col items-center text-center bg-slate-50 dark:bg-slate-900 p-4 transition-all duration-300 hover:-translate-y-2"> <!--[cite: 3] -->
-            <div class="w-16 h-16 rounded-full bg-softblue text-white font-heading font-black text-2xl flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(59,130,246,0.4)] border-4 border-slate-50 dark:border-slate-900 transition-transform duration-300 group-hover:scale-110">
-              1
-            </div>
-            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-softblue">Book Appointment</h4>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Call us or book online anytime. Pick a date and time that works best for your schedule period.</p>
+      <div class="max-w-4xl mx-auto space-y-4">
+        <!-- Row 1 -->
+        <div class="grid md:grid-cols-3 gap-4 items-center p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-3 md:gap-0 md:flex-col md:text-center">
+            <i class="fa-solid fa-clock text-teal text-xl w-6 shrink-0 md:mb-1"></i>
+            <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Wait Time</span>
           </div>
-
-          <!-- Step 2 -->
-          <div class="group flex flex-col items-center text-center bg-slate-50 dark:bg-slate-900 p-4 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-16 h-16 rounded-full bg-teal text-white font-heading font-black text-2xl flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(20,184,166,0.4)] border-4 border-slate-50 dark:border-slate-900 transition-transform duration-300 group-hover:scale-110">
-              2
-            </div>
-            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-teal">We Visit You</h4>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Our licensed specialist arrives with portable diagnostic tools to test your hearing and for wax.</p>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-teal/5 border border-teal/20">
+            <i class="fa-solid fa-circle-check text-teal shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-900 dark:text-white">Same-week, often next-day</span>
           </div>
-
-          <!-- Step 3 -->
-          <div class="group flex flex-col items-center text-center bg-slate-50 dark:bg-slate-900 p-4 transition-all duration-300 hover:-translate-y-2">
-            <div class="flex items-center justify-center w-16 h-16 rounded-full bg-green text-white font-heading font-black text-2xl mb-6 border-4 border-slate-50 dark:border-slate-900 transition-all duration-300 group-hover:scale-110 shadow-[0_0_20px_rgba(16,185,129,0.4)]">
-              3
-            </div>
-            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-300 group-hover:text-green">Immediate Solutions</h4>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Receive wax removal on the spot or get fitted with custom-programmed hearing aids the same day.</p>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-700">
+            <i class="fa-solid fa-circle-xmark text-slate-400 shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">2–6 weeks for an appointment</span>
           </div>
+        </div>
 
+        <!-- Row 2 -->
+        <div class="grid md:grid-cols-3 gap-4 items-center p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-3 md:gap-0 md:flex-col md:text-center">
+            <i class="fa-solid fa-location-dot text-teal text-xl w-6 shrink-0 md:mb-1"></i>
+            <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Location</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-teal/5 border border-teal/20">
+            <i class="fa-solid fa-circle-check text-teal shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-900 dark:text-white">Your home, office, or facility</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-700">
+            <i class="fa-solid fa-circle-xmark text-slate-400 shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Travel to a clinic + waiting room</span>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="grid md:grid-cols-3 gap-4 items-center p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-3 md:gap-0 md:flex-col md:text-center">
+            <i class="fa-solid fa-display text-teal text-xl w-6 shrink-0 md:mb-1"></i>
+            <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Testing Environment</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-teal/5 border border-teal/20">
+            <i class="fa-solid fa-circle-check text-teal shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-900 dark:text-white">Tested in your real listening environment</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-700">
+            <i class="fa-solid fa-circle-xmark text-slate-400 shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Sterile booth, artificial acoustics</span>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="grid md:grid-cols-3 gap-4 items-center p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-3 md:gap-0 md:flex-col md:text-center">
+            <i class="fa-solid fa-gear text-teal text-xl w-6 shrink-0 md:mb-1"></i>
+            <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Follow-Up</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-teal/5 border border-teal/20">
+            <i class="fa-solid fa-circle-check text-teal shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-900 dark:text-white">Free in-home adjustments included</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-700">
+            <i class="fa-solid fa-circle-xmark text-slate-400 shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Must schedule and travel for each visit</span>
+          </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="grid md:grid-cols-3 gap-4 items-center p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-3 md:gap-0 md:flex-col md:text-center">
+            <i class="fa-solid fa-hand-holding-dollar text-teal text-xl w-6 shrink-0 md:mb-1"></i>
+            <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Pricing</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-teal/5 border border-teal/20">
+            <i class="fa-solid fa-circle-check text-teal shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-900 dark:text-white">Same as clinic — no travel markup</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-700">
+            <i class="fa-solid fa-circle-xmark text-slate-400 shrink-0"></i>
+            <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Similar pricing, extra time cost</span>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -343,7 +386,7 @@
 
         <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex flex-col justify-between shadow-sm hover:-translate-y-1 transition-transform">
           <div>
-            <div class="text-softblue text-3xl mb-6 opacity-50"><i class="fa-solid fa-quote-left"></i></div>
+            <div class="text-teal text-3xl mb-6 opacity-50"><i class="fa-solid fa-quote-left"></i></div>
             <p class="font-medium text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
               "My father is in a wheelchair and getting to a clinic was a nightmare. ClearSound came to his assisted living facility, tested his hearing, and fitted him for aids. It completely changed his quality of life."
             </p>
@@ -352,7 +395,7 @@
             <img src="images/prog1.avif" alt="Margaret T." class="w-11 h-11 rounded-full object-cover shrink-0">
             <div>
               <div class="font-bold text-lg text-slate-900 dark:text-white">Margaret T.</div>
-              <div class="text-xs text-softblue font-bold tracking-wider uppercase mt-0.5">Daughter of Patient</div>
+              <div class="text-xs text-teal font-bold tracking-wider uppercase mt-0.5">Daughter of Patient</div>
             </div>
           </div>
         </div>
@@ -404,7 +447,7 @@
 
         <div class="relative z-10 max-w-2xl mx-auto text-white">
           <h2 class="text-4xl md:text-5xl font-heading font-black mb-6">Ready to experience better hearing?</h2>
-          <p class="text-lg font-medium mb-10 text-teal-50">Don't wait weeks for an in-clinic appointment. Schedule a home visit today and hear what you've been missing.</p>
+          <p class="text-lg font-medium mb-10 text-teal-50">Same-week appointments available. No referral needed. Just pick a time that works for you and we'll handle the rest.</p>
 
           <div class="flex flex-col sm:flex-row justify-center gap-4"> <!--[cite: 3] -->
             <a href="book.html" class="px-8 py-4 rounded-xl bg-slate-900 text-white font-bold text-sm hover:scale-105 transition-transform duration-300 shadow-xl">

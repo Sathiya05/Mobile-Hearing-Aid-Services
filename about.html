@@ -15,7 +15,6 @@
         extend: {
           colors: {
             teal: '#14b8a6',
-            softblue: '#3b82f6',
             green: '#10b981',
           },
           fontFamily: {
@@ -136,7 +135,7 @@
               <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">Patients Helped</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-heading font-black text-softblue">98%</div>
+              <div class="text-3xl font-heading font-black text-teal">98%</div>
               <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">Satisfaction Rate</div>
             </div>
             <div class="text-center">
@@ -156,8 +155,8 @@
               <p class="text-sm text-slate-600 dark:text-slate-400">A world where hearing loss is never a barrier to connection. We envision communities where everyone has access to audiology care in the comfort of their own home.</p>
             </div>
           </div>
-          <div class="flex gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-softblue transition-colors duration-300 shadow-sm">
-            <div class="shrink-0 w-12 h-12 rounded-full bg-softblue/10 flex items-center justify-center text-softblue text-xl">
+          <div class="flex gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-teal transition-colors duration-300 shadow-sm">
+            <div class="shrink-0 w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center text-teal text-xl">
               <i class="fa-solid fa-hand-holding-heart"></i>
             </div>
             <div>
@@ -179,54 +178,83 @@
     </div>
   </section>
 
-  <!-- 3. OUR STORY / TIMELINE -->
-  <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme border-y border-slate-200 dark:border-slate-800">
-    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+  <!-- 3. OUR STORY / TIMELINE (Alternating Layout) -->
+  <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme border-y border-slate-200 dark:border-slate-800 relative overflow-hidden">
+    <div class="absolute top-20 -left-40 w-80 h-80 bg-teal/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-20 -right-40 w-80 h-80 bg-green/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10 relative z-10">
       <div class="text-center mb-16 max-w-2xl mx-auto">
         <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Our Journey</span>
         <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6">The ClearSound Story</h2>
         <p class="text-slate-600 dark:text-slate-400 font-medium">From a simple idea to a movement changing how hearing care is delivered.</p>
       </div>
 
-      <div class="relative max-w-3xl mx-auto">
-        <div class="absolute left-8 top-0 bottom-0 w-[2px] bg-slate-200 dark:bg-slate-700 hidden md:block"></div>
+      <div class="relative">
+        <!-- Center Line -->
+        <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal via-green to-teal -translate-x-1/2"></div>
 
-        <div class="space-y-12">
-          <div class="relative pl-0 md:pl-24">
-            <div class="hidden md:flex absolute left-4 w-9 h-9 rounded-full bg-teal text-white items-center justify-center font-heading font-black text-sm border-4 border-slate-50 dark:border-slate-900 z-10">1</div>
-            <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <span class="text-teal font-bold text-xs uppercase tracking-wider">2016 — The Beginning</span>
-              <h4 class="text-lg font-bold text-slate-900 dark:text-white mt-2 mb-2">A Frustrating Experience</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-400">Our founder, Sarah Mitchell, watched her aging grandfather struggle to get to audiology appointments. The travel, waiting, and stress made him give up on his hearing health entirely. She knew there had to be a better way.</p>
+        <div class="space-y-16 lg:space-y-24">
+
+          <!-- Item 1 - Left -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 group">
+            <div class="lg:w-1/2 lg:text-right lg:pr-12 order-2 lg:order-1">
+              <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border-l-4 border-teal shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3">2016 — The Beginning</div>
+                <h4 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
+                  <i class="fa-solid fa-heart-pulse text-teal text-lg"></i> A Frustrating Experience
+                </h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Our founder, Sarah Mitchell, watched her aging grandfather struggle to get to audiology appointments. The travel, waiting, and stress made him give up on his hearing health entirely. She knew there had to be a better way.</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex lg:w-12 h-12 rounded-full bg-teal text-white items-center justify-center font-heading font-black text-lg border-4 border-slate-50 dark:border-slate-900 z-10 shadow-xl shrink-0 order-1 lg:order-2">1</div>
+            <div class="hidden lg:block lg:w-1/2 order-3"></div>
+          </div>
+
+          <!-- Item 2 - Right -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 group">
+            <div class="hidden lg:block lg:w-1/2 order-1"></div>
+            <div class="hidden lg:flex lg:w-12 h-12 rounded-full bg-teal text-white items-center justify-center font-heading font-black text-lg border-4 border-slate-50 dark:border-slate-900 z-10 shadow-xl order-2">2</div>
+            <div class="lg:w-1/2 lg:pl-12 order-3">
+              <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border-r-4 border-teal shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3">2018 — The Launch</div>
+                <h4 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
+                  <i class="fa-solid fa-rocket text-teal text-lg"></i> First Mobile Clinic
+                </h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">After two years of planning, we launched our first mobile hearing clinic in Portland. Equipped with portable audiometers and a passionate team, we served 50 patients in our first month.</p>
+              </div>
             </div>
           </div>
 
-          <div class="relative pl-0 md:pl-24">
-            <div class="hidden md:flex absolute left-4 w-9 h-9 rounded-full bg-softblue text-white items-center justify-center font-heading font-black text-sm border-4 border-slate-50 dark:border-slate-900 z-10">2</div>
-            <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <span class="text-softblue font-bold text-xs uppercase tracking-wider">2018 — The Launch</span>
-              <h4 class="text-lg font-bold text-slate-900 dark:text-white mt-2 mb-2">First Mobile Clinic</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-400">After two years of planning, we launched our first mobile hearing clinic in Portland. Equipped with portable audiometers and a passionate team, we served 50 patients in our first month.</p>
+          <!-- Item 3 - Left -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 group">
+            <div class="lg:w-1/2 lg:text-right lg:pr-12 order-2 lg:order-1">
+              <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border-l-4 border-green shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green/10 text-green text-xs font-bold uppercase tracking-wider mb-3">2022 — Expansion</div>
+                <h4 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
+                  <i class="fa-solid fa-expand text-green text-lg"></i> Regional Growth
+                </h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">We expanded to cover 50+ cities across three states, adding tinnitus management and pediatric testing to our service offerings. Our team grew to 15 licensed audiologists.</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex lg:w-12 h-12 rounded-full bg-green text-white items-center justify-center font-heading font-black text-lg border-4 border-slate-50 dark:border-slate-900 z-10 shadow-xl shrink-0 order-1 lg:order-2">3</div>
+            <div class="hidden lg:block lg:w-1/2 order-3"></div>
+          </div>
+
+          <!-- Item 4 - Right -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 group">
+            <div class="hidden lg:block lg:w-1/2 order-1"></div>
+            <div class="hidden lg:flex lg:w-12 h-12 rounded-full bg-teal text-white items-center justify-center font-heading font-black text-lg border-4 border-slate-50 dark:border-slate-900 z-10 shadow-xl order-2">4</div>
+            <div class="lg:w-1/2 lg:pl-12 order-3">
+              <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border-r-4 border-teal shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3">2025 — Today</div>
+                <h4 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
+                  <i class="fa-solid fa-trophy text-teal text-lg"></i> Trusted by Thousands
+                </h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">ClearSound is now the region's leading mobile hearing service, with over 500 5-star reviews and partnerships with major insurance providers. And we are just getting started.</p>
+              </div>
             </div>
           </div>
 
-          <div class="relative pl-0 md:pl-24">
-            <div class="hidden md:flex absolute left-4 w-9 h-9 rounded-full bg-green text-white items-center justify-center font-heading font-black text-sm border-4 border-slate-50 dark:border-slate-900 z-10">3</div>
-            <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <span class="text-green font-bold text-xs uppercase tracking-wider">2022 — Expansion</span>
-              <h4 class="text-lg font-bold text-slate-900 dark:text-white mt-2 mb-2">Regional Growth</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-400">We expanded to cover 50+ cities across three states, adding tinnitus management and pediatric testing to our service offerings. Our team grew to 15 licensed audiologists.</p>
-            </div>
-          </div>
-
-          <div class="relative pl-0 md:pl-24">
-            <div class="hidden md:flex absolute left-4 w-9 h-9 rounded-full bg-teal text-white items-center justify-center font-heading font-black text-sm border-4 border-slate-50 dark:border-slate-900 z-10">4</div>
-            <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-              <span class="text-teal font-bold text-xs uppercase tracking-wider">2025 — Today</span>
-              <h4 class="text-lg font-bold text-slate-900 dark:text-white mt-2 mb-2">Trusted by Thousands</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-400">ClearSound is now the region's leading mobile hearing service, with over 500 5-star reviews and partnerships with major insurance providers. And we are just getting started.</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -256,7 +284,7 @@
             <img src="images\prob1.avif" alt="Dr. James Park" class="w-full h-full object-cover">
           </div>
           <h4 class="text-lg font-bold text-slate-900 dark:text-white">Dr. James Park</h4>
-          <p class="text-sm text-softblue font-bold">Senior Audiologist</p>
+          <p class="text-sm text-teal font-bold">Senior Audiologist</p>
           <p class="text-xs text-slate-500 mt-2">Au.D., F-AAA — 12 years experience</p>
         </div>
 
@@ -281,31 +309,45 @@
     </div>
   </section>
 
-  <!-- 5. WHY MOBILE CARE (STATS BANNER) -->
-  <section class="py-20 bg-teal transition-theme">
-    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
-      <div class="grid md:grid-cols-4 gap-8 text-center text-white">
-        <div>
-          <div class="text-4xl md:text-5xl font-heading font-black mb-2">500+</div>
-          <p class="text-sm font-bold uppercase tracking-wider opacity-80">Happy Patients</p>
+  <!-- 5. STATS BANNER (Icon-driven) -->
+  <section class="py-20 relative overflow-hidden bg-gradient-to-br from-teal to-green transition-theme">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 relative z-10">
+      <div class="grid md:grid-cols-4 gap-6 text-center text-white">
+        <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 transition-all duration-300">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white/20 flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-face-smile"></i>
+          </div>
+          <div class="text-5xl font-heading font-black mb-1">500+</div>
+          <p class="text-sm font-bold uppercase tracking-wider text-white/80">Happy Patients</p>
         </div>
-        <div>
-          <div class="text-4xl md:text-5xl font-heading font-black mb-2">98%</div>
-          <p class="text-sm font-bold uppercase tracking-wider opacity-80">Satisfaction Rate</p>
+        <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 transition-all duration-300">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white/20 flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="text-5xl font-heading font-black mb-1">98%</div>
+          <p class="text-sm font-bold uppercase tracking-wider text-white/80">Satisfaction Rate</p>
         </div>
-        <div>
-          <div class="text-4xl md:text-5xl font-heading font-black mb-2">50+</div>
-          <p class="text-sm font-bold uppercase tracking-wider opacity-80">Cities Covered</p>
+        <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 transition-all duration-300">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white/20 flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="text-5xl font-heading font-black mb-1">50+</div>
+          <p class="text-sm font-bold uppercase tracking-wider text-white/80">Cities Covered</p>
         </div>
-        <div>
-          <div class="text-4xl md:text-5xl font-heading font-black mb-2">15</div>
-          <p class="text-sm font-bold uppercase tracking-wider opacity-80">Licensed Audiologists</p>
+        <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 transition-all duration-300">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-white/20 flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <div class="text-5xl font-heading font-black mb-1">15</div>
+          <p class="text-sm font-bold uppercase tracking-wider text-white/80">Licensed Audiologists</p>
         </div>
       </div>
     </div>
   </section>
 
-<!-- 6. VALUES -->
+<!-- 6. VALUES (Staggered Layout) -->
   <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme">
     <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
       <div class="text-center mb-16 max-w-2xl mx-auto">
@@ -315,48 +357,48 @@
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Patient First Card -->
-        <div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center hover:-translate-y-2 transition-all duration-300 shadow-sm flex flex-col">
-          <div class="w-14 h-14 rounded-full bg-teal/10 text-teal flex items-center justify-center text-2xl mx-auto mb-5">
-            <i class="fa-solid fa-user-check"></i>
+        <div class="p-0 rounded-3xl bg-white dark:bg-slate-800  hover:-translate-y-2 transition-all duration-300 shadow-lg flex flex-col overflow-hidden relative">
+          <div class="relative h-48 overflow-hidden">
+            <img src="images\img2.avif" alt="Audiologist listening empathetically to an older patient" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-teal/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-teal text-lg shadow-lg">
+              <i class="fa-solid fa-user-check"></i>
+            </div>
           </div>
-          
-          <!-- Relevant Image for Patient First -->
-          <div class="mb-6 rounded-xl overflow-hidden aspect-[16/10] border border-slate-100 dark:border-slate-700 shadow-inner">
-            <img src="images\img2.avif" alt="Audiologist listening empathetically to an older patient during a home visit" class="w-full h-full object-cover">
+          <div class="p-6 text-center flex-1 flex flex-col">
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Patient First</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">Every decision we make starts with what is best for you. Your convenience, comfort, and outcomes are our priority.</p>
           </div>
-
-          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Patient First</h4>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">Every decision we make starts with what is best for patient. Your convenience, and outcomes are our priority.</p>
         </div>
 
         <!-- Clinical Excellence Card -->
-        <div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center hover:-translate-y-2 transition-all duration-300 shadow-sm flex flex-col">
-          <div class="w-14 h-14 rounded-full bg-softblue/10 text-softblue flex items-center justify-center text-2xl mx-auto mb-5">
-            <i class="fa-solid fa-flask"></i>
+        <div class="p-0 rounded-3xl bg-white dark:bg-slate-800  hover:-translate-y-2 transition-all duration-300 shadow-lg flex flex-col overflow-hidden relative">
+          <div class="relative h-48 overflow-hidden">
+            <img src="images\img3.avif" alt="Audiologist performing hearing assessment" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-green/40 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-green text-lg shadow-lg">
+              <i class="fa-solid fa-flask"></i>
+            </div>
           </div>
-          
-          <!-- Relevant Image for Clinical Excellence -->
-          <div class="mb-6 rounded-xl overflow-hidden aspect-[16/10] border border-slate-100 dark:border-slate-700 shadow-inner">
-            <img src="images\img3.avif" alt="Audiologist performing a precise hearing assessment using advanced portable technology on a patient" class="w-full h-full object-cover">
+          <div class="p-6 text-center flex-1 flex flex-col">
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Clinical Excellence</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">We invest in the latest portable diagnostic technology and ongoing education to ensure hospital-grade care at home.</p>
           </div>
-
-          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">24/7 Clinic</h4>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">We invest in the latest portable diagnostic technology and ongoing education to ensure hospital-grade care at home.</p>
         </div>
 
         <!-- Trust & Integrity Card -->
-        <div class="p-8 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center hover:-translate-y-2 transition-all duration-300 shadow-sm flex flex-col">
-          <div class="w-14 h-14 rounded-full bg-green/10 text-green flex items-center justify-center text-2xl mx-auto mb-5">
-            <i class="fa-solid fa-handshake"></i>
+        <div class="p-0 rounded-3xl bg-white dark:bg-slate-800  hover:-translate-y-2 transition-all duration-300 shadow-lg flex flex-col overflow-hidden relative">
+          <div class="relative h-48 overflow-hidden">
+            <img src="images\img4.webp" alt="Audiologist shaking hands with a smiling patient" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-800/50 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-slate-700 text-lg shadow-lg">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
           </div>
-          
-          <!-- Relevant Image for Trust & Integrity -->
-          <div class="mb-6 rounded-xl overflow-hidden aspect-[16/10] border border-slate-100 dark:border-slate-700 shadow-inner">
-            <img src="images\img4.webp" alt="Audiologist shaking hands with a smiling patient after an honest consultation" class="w-full h-full object-cover">
+          <div class="p-6 text-center flex-1 flex flex-col">
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Trust & Integrity</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">We only recommend what you truly need. No upselling, no pressure. Just honest, transparent hearing care you can trust.</p>
           </div>
-
-          <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Trust & Integrity</h4>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">We only recommend what you truly need. No upselling, no pressure. Just honest, transparent hearing care you can trust.</p>
         </div>
       </div>
     </div>
