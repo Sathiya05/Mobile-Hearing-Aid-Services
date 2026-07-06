@@ -74,7 +74,7 @@
                 Book a Visit <i class="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-300"></i>
               </span>
             </a>
-            <a href="tel:+1234567890" class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-semibold text-sm overflow-hidden transition-all hover:border-teal hover:text-teal dark:hover:text-teal">
+            <a href="tel:+1234567890" class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-semibold text-sm overflow-hidden transition-all hover:border-teal hover:text-teal dark:hover:border-teal dark:hover:text-teal">
               <span class="absolute inset-0 w-full h-full bg-teal/0 transition-all duration-300 ease-out group-hover:bg-teal/5"></span>
               <span class="relative z-10 flex items-center gap-2">
                 <i class="fa-solid fa-phone"></i> (123) 456-7890
@@ -178,13 +178,19 @@
     </div>
   </section>
 
-  <!-- 3. OUR STORY / TIMELINE (Alternating Layout) -->
-  <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme border-y border-slate-200 dark:border-slate-800 relative overflow-hidden">
-    <div class="absolute top-20 -left-40 w-80 h-80 bg-teal/5 rounded-full blur-[100px] pointer-events-none"></div>
-    <div class="absolute bottom-20 -right-40 w-80 h-80 bg-green/5 rounded-full blur-[100px] pointer-events-none"></div>
+  <!-- 3. OUR STORY / TIMELINE -->
+  <section class="py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 transition-theme border-y border-slate-200 dark:border-slate-800 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,rgba(20,184,166,0.08)_0%,transparent_50%)] pointer-events-none"></div>
+    <div class="absolute top-20 -left-40 w-80 h-80 bg-teal/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-20 -right-40 w-80 h-80 bg-green/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-2 h-2 rounded-full bg-teal/30 hidden lg:block"></div>
+    <div class="absolute bottom-1/4 left-10 w-3 h-3 rounded-full bg-green/30 hidden lg:block"></div>
     <div class="max-w-[1200px] mx-auto px-6 lg:px-10 relative z-10">
       <div class="text-center mb-16 max-w-2xl mx-auto">
-        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Our Journey</span>
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-teal/10 dark:bg-teal/10 border border-teal/20 mb-6">
+          <span class="w-2 h-2 rounded-full bg-teal animate-pulse"></span>
+          <span class="text-teal font-bold uppercase tracking-widest text-xs">Our Journey</span>
+        </div>
         <h2 class="text-3xl md:text-5xl font-heading font-semibold text-slate-900 dark:text-white mb-6">The ClearSound Story</h2>
         <p class="text-slate-600 dark:text-slate-400 font-medium">From a simple idea to a movement changing how hearing care is delivered.</p>
       </div>
@@ -192,35 +198,43 @@
       <div class="relative">
         <!-- Center Line -->
         <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal via-green to-teal -translate-x-1/2"></div>
+        <div class="hidden lg:block absolute left-1/2 top-3 w-3 h-3 -translate-x-1/2 rounded-full bg-teal shadow-[0_0_12px_rgba(20,184,166,0.6)]"></div>
+        <div class="hidden lg:block absolute left-1/2 bottom-3 w-3 h-3 -translate-x-1/2 rounded-full bg-teal shadow-[0_0_12px_rgba(20,184,166,0.6)]"></div>
 
-        <div class="space-y-16 lg:space-y-24">
+        <div class="space-y-16 lg:space-y-20">
 
           <!-- Item 1 - Left -->
           <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 group">
             <div class="lg:w-1/2 lg:text-right lg:pr-12 order-2 lg:order-1">
-              <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border-l-4 border-teal shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3">2016 — The Beginning</div>
-                <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
-                  <i class="fa-solid fa-heart-pulse text-teal text-lg"></i> A Frustrating Experience
-                </h4>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Our founder, Sarah Mitchell, watched her aging grandfather struggle to get to audiology appointments. The travel, waiting, and stress made him give up on his hearing health entirely. She knew there had to be a better way.</p>
+              <div class="relative p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 shadow-xl hover:-translate-y-1 transition-all duration-500 before:absolute before:inset-0 before:rounded-2xl before:border-l-4 before:border-teal before:pointer-events-none overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-teal/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="relative z-10">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3 border border-teal/20">2016 — The Beginning</div>
+                  <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-lg bg-teal/10 flex items-center justify-center text-teal shrink-0"><i class="fa-solid fa-heart-pulse text-sm"></i></span> A Frustrating Experience
+                  </h4>
+                  <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Our founder, Sarah Mitchell, watched her aging grandfather struggle to get to audiology appointments. The travel, waiting, and stress made him give up on his hearing health entirely. She knew there had to be a better way.</p>
+                </div>
               </div>
             </div>
-            <div class="hidden lg:flex lg:w-12 h-12 rounded-full bg-teal text-white items-center justify-center font-heading font-black text-lg border-4 border-slate-50 dark:border-slate-900 z-10 shadow-xl shrink-0 order-1 lg:order-2">1</div>
+            <div class="hidden lg:flex w-14 h-14 rounded-full bg-gradient-to-br from-teal to-teal/80 text-white items-center justify-center font-heading font-black text-xl border-4 border-slate-50 dark:border-slate-900 z-10 shadow-[0_0_20px_rgba(20,184,166,0.35)] shrink-0 order-1 lg:order-2">1</div>
             <div class="hidden lg:block lg:w-1/2 order-3"></div>
           </div>
 
           <!-- Item 2 - Right -->
           <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 group">
             <div class="hidden lg:block lg:w-1/2 order-1"></div>
-            <div class="hidden lg:flex lg:w-12 h-12 rounded-full bg-teal text-white items-center justify-center font-heading font-black text-lg border-4 border-slate-50 dark:border-slate-900 z-10 shadow-xl order-2">2</div>
+            <div class="hidden lg:flex w-14 h-14 rounded-full bg-gradient-to-br from-teal to-teal/80 text-white items-center justify-center font-heading font-black text-xl border-4 border-slate-50 dark:border-slate-900 z-10 shadow-[0_0_20px_rgba(20,184,166,0.35)] shrink-0 order-2">2</div>
             <div class="lg:w-1/2 lg:pl-12 order-3">
-              <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border-r-4 border-teal shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3">2018 — The Launch</div>
-                <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
-                  <i class="fa-solid fa-rocket text-teal text-lg"></i> First Mobile Clinic
-                </h4>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">After two years of planning, we launched our first mobile hearing clinic in Portland. Equipped with portable audiometers and a passionate team, we served 50 patients in our first month.</p>
+              <div class="relative p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 shadow-xl hover:-translate-y-1 transition-all duration-500 before:absolute before:inset-0 before:rounded-2xl before:border-r-4 before:border-teal before:pointer-events-none overflow-hidden">
+                <div class="absolute top-0 left-0 w-32 h-32 bg-teal/5 rounded-full -translate-y-1/2 -translate-x-1/2"></div>
+                <div class="relative z-10">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3 border border-teal/20">2018 — The Launch</div>
+                  <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-lg bg-teal/10 flex items-center justify-center text-teal shrink-0"><i class="fa-solid fa-rocket text-sm"></i></span> First Mobile Clinic
+                  </h4>
+                  <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">After two years of planning, we launched our first mobile hearing clinic in Portland. Equipped with portable audiometers and a passionate team, we served 50 patients in our first month.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -228,29 +242,35 @@
           <!-- Item 3 - Left -->
           <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 group">
             <div class="lg:w-1/2 lg:text-right lg:pr-12 order-2 lg:order-1">
-              <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border-l-4 border-green shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green/10 text-green text-xs font-bold uppercase tracking-wider mb-3">2022 — Expansion</div>
-                <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
-                  <i class="fa-solid fa-expand text-green text-lg"></i> Regional Growth
-                </h4>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">We expanded to cover 50+ cities across three states, adding tinnitus management and pediatric testing to our service offerings. Our team grew to 15 licensed audiologists.</p>
+              <div class="relative p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 shadow-xl hover:-translate-y-1 transition-all duration-500 before:absolute before:inset-0 before:rounded-2xl before:border-l-4 before:border-green before:pointer-events-none overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-green/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="relative z-10">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green/10 text-green text-xs font-bold uppercase tracking-wider mb-3 border border-green/20">2022 — Expansion</div>
+                  <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-lg bg-green/10 flex items-center justify-center text-green shrink-0"><i class="fa-solid fa-expand text-sm"></i></span> Regional Growth
+                  </h4>
+                  <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">We expanded to cover 50+ cities across three states, adding tinnitus management and pediatric testing to our service offerings. Our team grew to 15 licensed audiologists.</p>
+                </div>
               </div>
             </div>
-            <div class="hidden lg:flex lg:w-12 h-12 rounded-full bg-green text-white items-center justify-center font-heading font-black text-lg border-4 border-slate-50 dark:border-slate-900 z-10 shadow-xl shrink-0 order-1 lg:order-2">3</div>
+            <div class="hidden lg:flex w-14 h-14 rounded-full bg-gradient-to-br from-green to-green/80 text-white items-center justify-center font-heading font-black text-xl border-4 border-slate-50 dark:border-slate-900 z-10 shadow-[0_0_20px_rgba(16,185,129,0.35)] shrink-0 order-1 lg:order-2">3</div>
             <div class="hidden lg:block lg:w-1/2 order-3"></div>
           </div>
 
           <!-- Item 4 - Right -->
           <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 group">
             <div class="hidden lg:block lg:w-1/2 order-1"></div>
-            <div class="hidden lg:flex lg:w-12 h-12 rounded-full bg-teal text-white items-center justify-center font-heading font-black text-lg border-4 border-slate-50 dark:border-slate-900 z-10 shadow-xl order-2">4</div>
+            <div class="hidden lg:flex w-14 h-14 rounded-full bg-gradient-to-br from-teal to-teal/80 text-white items-center justify-center font-heading font-black text-xl border-4 border-slate-50 dark:border-slate-900 z-10 shadow-[0_0_20px_rgba(20,184,166,0.35)] shrink-0 order-2">4</div>
             <div class="lg:w-1/2 lg:pl-12 order-3">
-              <div class="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 border-r-4 border-teal shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3">2025 — Today</div>
-                <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
-                  <i class="fa-solid fa-trophy text-teal text-lg"></i> Trusted by Thousands
-                </h4>
-                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">ClearSound is now the region's leading mobile hearing service, with over 500 5-star reviews and partnerships with major insurance providers. And we are just getting started.</p>
+              <div class="relative p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-800 shadow-xl hover:-translate-y-1 transition-all duration-500 before:absolute before:inset-0 before:rounded-2xl before:border-r-4 before:border-teal before:pointer-events-none overflow-hidden">
+                <div class="absolute top-0 left-0 w-32 h-32 bg-teal/5 rounded-full -translate-y-1/2 -translate-x-1/2"></div>
+                <div class="relative z-10">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold uppercase tracking-wider mb-3 border border-teal/20">2025 — Today</div>
+                  <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-lg bg-teal/10 flex items-center justify-center text-teal shrink-0"><i class="fa-solid fa-trophy text-sm"></i></span> Trusted by Thousands
+                  </h4>
+                  <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">ClearSound is now the region's leading mobile hearing service, with over 500 5-star reviews and partnerships with major insurance providers. And we are just getting started.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -309,102 +329,200 @@
     </div>
   </section>
 
-  <!-- 5. STATS BANNER (Icon-driven) -->
-  <section class="py-20 relative overflow-hidden bg-gradient-to-br from-teal to-green transition-theme">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+  <!-- 5. STATS BANNER -->
+  <section class="py-20 relative overflow-hidden bg-gradient-to-br from-teal via-teal-600 to-green transition-theme">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIvPjwvZz48L2c+PC9zdmc+')] pointer-events-none"></div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-72 h-72 bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
+    <div class="absolute top-10 left-10 w-4 h-4 border-2 border-white/20 rounded-full"></div>
+    <div class="absolute bottom-10 right-10 w-6 h-6 border-2 border-white/15 rounded-full"></div>
     <div class="max-w-[1440px] mx-auto px-6 lg:px-10 relative z-10">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
+          <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+          <span class="text-white font-bold uppercase tracking-widest text-xs">By the Numbers</span>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-heading font-semibold text-white mb-3">Our impact in numbers</h2>
+        <p class="text-white/70 font-medium">Real results from real patients across the region.</p>
+      </div>
       <div class="grid md:grid-cols-4 gap-6 text-center text-white">
-        <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 transition-all duration-300">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-white/20 flex items-center justify-center text-2xl mb-4">
+        <div class="p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 hover:bg-white/15 transition-all duration-500 group">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-white/30 to-white/5 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform duration-500 shadow-lg">
             <i class="fa-solid fa-face-smile"></i>
           </div>
-          <div class="text-5xl font-heading font-black mb-1">500+</div>
-          <p class="text-sm font-medium uppercase tracking-wider text-white/80">Happy Patients</p>
+          <div class="text-5xl font-heading font-black mb-1 tracking-tight">500+</div>
+          <p class="text-sm font-medium uppercase tracking-wider text-white/70">Happy Patients</p>
         </div>
-        <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 transition-all duration-300">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-white/20 flex items-center justify-center text-2xl mb-4">
+        <div class="p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 hover:bg-white/15 transition-all duration-500 group">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-white/30 to-white/5 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform duration-500 shadow-lg">
             <i class="fa-solid fa-star"></i>
           </div>
-          <div class="text-5xl font-heading font-black mb-1">98%</div>
-          <p class="text-sm font-medium uppercase tracking-wider text-white/80">Satisfaction Rate</p>
+          <div class="text-5xl font-heading font-black mb-1 tracking-tight">98%</div>
+          <p class="text-sm font-medium uppercase tracking-wider text-white/70">Satisfaction Rate</p>
         </div>
-        <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 transition-all duration-300">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-white/20 flex items-center justify-center text-2xl mb-4">
+        <div class="p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 hover:bg-white/15 transition-all duration-500 group">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-white/30 to-white/5 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform duration-500 shadow-lg">
             <i class="fa-solid fa-location-dot"></i>
           </div>
-          <div class="text-5xl font-heading font-black mb-1">50+</div>
-          <p class="text-sm font-medium uppercase tracking-wider text-white/80">Cities Covered</p>
+          <div class="text-5xl font-heading font-black mb-1 tracking-tight">50+</div>
+          <p class="text-sm font-medium uppercase tracking-wider text-white/70">Cities Covered</p>
         </div>
-        <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 transition-all duration-300">
-          <div class="w-14 h-14 mx-auto rounded-2xl bg-white/20 flex items-center justify-center text-2xl mb-4">
+        <div class="p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20 hover:-translate-y-2 hover:bg-white/15 transition-all duration-500 group">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-white/30 to-white/5 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform duration-500 shadow-lg">
             <i class="fa-solid fa-user-doctor"></i>
           </div>
-          <div class="text-5xl font-heading font-black mb-1">15</div>
-          <p class="text-sm font-medium uppercase tracking-wider text-white/80">Licensed Audiologists</p>
+          <div class="text-5xl font-heading font-black mb-1 tracking-tight">15</div>
+          <p class="text-sm font-medium uppercase tracking-wider text-white/70">Licensed Audiologists</p>
         </div>
       </div>
     </div>
   </section>
 
-<!-- 6. VALUES (Staggered Layout) -->
-  <section class="py-24 bg-slate-50 dark:bg-slate-900 transition-theme">
-    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+<!-- 6. VALUES -->
+  <section class="py-24 bg-white dark:bg-slate-950 transition-theme relative overflow-hidden">
+    <div class="absolute inset-0 bg-dot-pattern opacity-30 pointer-events-none"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-teal/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-green/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 relative z-10">
       <div class="text-center mb-16 max-w-2xl mx-auto">
-        <span class="text-teal font-bold uppercase tracking-widest text-xs mb-4 block">Core Values</span>
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-teal/10 dark:bg-teal/10 border border-teal/20 mb-6">
+          <i class="fa-solid fa-gem text-teal text-xs"></i>
+          <span class="text-teal font-bold uppercase tracking-widest text-xs">Core Values</span>
+        </div>
         <h2 class="text-3xl md:text-5xl font-heading font-semibold text-slate-900 dark:text-white mb-6">What drives us every day</h2>
+        <p class="text-slate-600 dark:text-slate-400 font-medium">Our principles shape every patient interaction and business decision.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
         <!-- Patient First Card -->
-        <div class="p-0 rounded-3xl bg-white dark:bg-slate-800  hover:-translate-y-2 transition-all duration-300 shadow-lg flex flex-col overflow-hidden relative">
-          <div class="relative h-48 overflow-hidden">
-            <img src="images\img2.avif" alt="Audiologist listening empathetically to an older patient" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-teal/40 to-transparent"></div>
-            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-teal text-lg shadow-lg">
+        <div class="group rounded-3xl bg-white dark:bg-slate-800 hover:-translate-y-2 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col overflow-hidden relative">
+          <div class="relative h-52 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-transparent z-10"></div>
+            <img src="images\img2.avif" alt="Audiologist listening empathetically to an older patient" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-teal/60 via-teal/10 to-transparent z-10"></div>
+            <div class="absolute bottom-4 left-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-teal text-xs font-bold shadow-lg">
               <i class="fa-solid fa-user-check"></i>
+              <span>Value #1</span>
             </div>
           </div>
-          <div class="p-6 text-center flex-1 flex flex-col">
-            <h4 class="text-lg font-semibold text-slate-900 dark:text-white mb-3">Patient First</h4>
-            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">Every decision we make starts with what is best for you. Your convenience, comfort, and outcomes are our priority.</p>
+          <div class="relative p-7 text-center flex-1 flex flex-col">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-teal"></div>
+            <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 mt-1">Patient First</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto leading-relaxed">Every decision we make starts with what is best for you. Your convenience, comfort, and outcomes are our priority.</p>
           </div>
         </div>
 
         <!-- Clinical Excellence Card -->
-        <div class="p-0 rounded-3xl bg-white dark:bg-slate-800  hover:-translate-y-2 transition-all duration-300 shadow-lg flex flex-col overflow-hidden relative">
-          <div class="relative h-48 overflow-hidden">
-            <img src="images\img3.avif" alt="Audiologist performing hearing assessment" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-green/40 to-transparent"></div>
-            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-green text-lg shadow-lg">
+        <div class="group rounded-3xl bg-white dark:bg-slate-800 hover:-translate-y-2 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col overflow-hidden relative lg:-mt-6">
+          <div class="relative h-52 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent z-10"></div>
+            <img src="images\img3.avif" alt="Audiologist performing hearing assessment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-green/60 via-green/10 to-transparent z-10"></div>
+            <div class="absolute bottom-4 left-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-green text-xs font-bold shadow-lg">
               <i class="fa-solid fa-flask"></i>
+              <span>Value #2</span>
             </div>
           </div>
-          <div class="p-6 text-center flex-1 flex flex-col">
-            <h4 class="text-lg font-semibold text-slate-900 dark:text-white mb-3">Clinical Excellence</h4>
-            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">We invest in the latest portable diagnostic technology and ongoing education to ensure hospital-grade care at home.</p>
+          <div class="relative p-7 text-center flex-1 flex flex-col">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-green"></div>
+            <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 mt-1">Clinical Excellence</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto leading-relaxed">We invest in the latest portable diagnostic technology and ongoing education to ensure hospital-grade care at home.</p>
           </div>
         </div>
 
         <!-- Trust & Integrity Card -->
-        <div class="p-0 rounded-3xl bg-white dark:bg-slate-800  hover:-translate-y-2 transition-all duration-300 shadow-lg flex flex-col overflow-hidden relative">
-          <div class="relative h-48 overflow-hidden">
-            <img src="images\img4.webp" alt="Audiologist shaking hands with a smiling patient" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-800/50 to-transparent"></div>
-            <div class="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-slate-700 text-lg shadow-lg">
+        <div class="group rounded-3xl bg-white dark:bg-slate-800 hover:-translate-y-2 transition-all duration-500 shadow-lg hover:shadow-2xl flex flex-col overflow-hidden relative">
+          <div class="relative h-52 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-700/20 to-transparent z-10"></div>
+            <img src="images\img4.webp" alt="Audiologist shaking hands with a smiling patient" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-800/70 via-slate-800/10 to-transparent z-10"></div>
+            <div class="absolute bottom-4 left-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-bold shadow-lg">
               <i class="fa-solid fa-handshake"></i>
+              <span>Value #3</span>
             </div>
           </div>
-          <div class="p-6 text-center flex-1 flex flex-col">
-            <h4 class="text-lg font-semibold text-slate-900 dark:text-white mb-3">Trust & Integrity</h4>
-            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto">We only recommend what you truly need. No upselling, no pressure. Just honest, transparent hearing care you can trust.</p>
+          <div class="relative p-7 text-center flex-1 flex flex-col">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-slate-400 dark:bg-slate-500"></div>
+            <h4 class="text-xl font-heading font-semibold text-slate-900 dark:text-white mb-3 mt-1">Trust & Integrity</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-auto leading-relaxed">We only recommend what you truly need. No upselling, no pressure. Just honest, transparent hearing care you can trust.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. CTA -->
+
+
+  <!-- 8. INSURANCE & PARTNERS -->
+  <section class="py-24 bg-white dark:bg-slate-950 transition-theme">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-teal/10 dark:bg-teal/10 border border-teal/20 mb-6">
+          <i class="fa-solid fa-handshake text-teal text-xs"></i>
+          <span class="text-teal font-bold uppercase tracking-widest text-xs">Partners</span>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-heading font-semibold text-slate-900 dark:text-white mb-6">Accepted by major providers</h2>
+        <p class="text-slate-600 dark:text-slate-400 font-medium">We work with leading insurance companies and professional organizations to make care accessible.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center text-center hover:-translate-y-1 hover:border-teal transition-all duration-300 group">
+          <div class="w-16 h-16 rounded-2xl bg-teal/10 flex items-center justify-center text-teal text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-shield"></i>
+          </div>
+          <p class="text-sm font-bold text-slate-900 dark:text-white">Medicare</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Accepted</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center text-center hover:-translate-y-1 hover:border-teal transition-all duration-300 group">
+          <div class="w-16 h-16 rounded-2xl bg-teal/10 flex items-center justify-center text-teal text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <p class="text-sm font-bold text-slate-900 dark:text-white">BlueCross</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">In-Network</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center text-center hover:-translate-y-1 hover:border-teal transition-all duration-300 group">
+          <div class="w-16 h-16 rounded-2xl bg-teal/10 flex items-center justify-center text-teal text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-notes-medical"></i>
+          </div>
+          <p class="text-sm font-bold text-slate-900 dark:text-white">Aetna</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Covered</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center text-center hover:-translate-y-1 hover:border-teal transition-all duration-300 group">
+          <div class="w-16 h-16 rounded-2xl bg-teal/10 flex items-center justify-center text-teal text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <p class="text-sm font-bold text-slate-900 dark:text-white">UnitedHealthcare</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">In-Network</p>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <div class="inline-flex flex-wrap items-center justify-center gap-8 px-8 py-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+            <i class="fa-solid fa-certificate text-teal"></i>
+            <span>AAA Accredited</span>
+          </div>
+          <div class="w-px h-6 bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+          <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+            <i class="fa-solid fa-certificate text-teal"></i>
+            <span>HIPAA Compliant</span>
+          </div>
+          <div class="w-px h-6 bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+          <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+            <i class="fa-solid fa-certificate text-teal"></i>
+            <span>Licensed Audiologists</span>
+          </div>
+          <div class="w-px h-6 bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+          <div class="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+            <i class="fa-solid fa-certificate text-teal"></i>
+            <span>BBB Rating A+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CTA -->
   <section class="py-24 bg-white dark:bg-slate-950 transition-theme">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
       <div class="relative rounded-3xl overflow-hidden bg-teal p-10 md:p-16 text-center shadow-2xl">
